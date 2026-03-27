@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polaris AI Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar__brand">
+      <button class="navbar__toggle" id="sidebarToggle" aria-label="Toggle sidebar">&#9776;</button>
+      <span class="navbar__logo">&#9733;</span>
+      <span class="navbar__title">Polaris AI Dashboard</span>
+    </div>
+    <div class="navbar__meta">
+      <span class="badge badge--live">Live</span>
+      <span class="navbar__date" id="currentDate"></span>
+    </div>
+  </header>
+
+  <!-- LAYOUT WRAPPER -->
+  <div class="layout" id="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar__nav" aria-label="Navegación principal">
+
+        <div class="sidebar__section-label">Contenido</div>
+
+        <a href="#noticias" class="sidebar__item" data-section="noticias">
+          <span class="sidebar__icon">&#128240;</span>
+          <span class="sidebar__label">Top Noticias IA</span>
+        </a>
+        <a href="#herramientas" class="sidebar__item" data-section="herramientas">
+          <span class="sidebar__icon">&#9881;</span>
+          <span class="sidebar__label">Herramientas IA</span>
+        </a>
+        <a href="#prompts" class="sidebar__item" data-section="prompts">
+          <span class="sidebar__icon">&#9889;</span>
+          <span class="sidebar__label">Prompts &amp; Skills</span>
+        </a>
+        <a href="#ideas" class="sidebar__item" data-section="ideas">
+          <span class="sidebar__icon">&#128161;</span>
+          <span class="sidebar__label">Ideas de Contenido</span>
+        </a>
+
+        <div class="sidebar__divider"></div>
+        <div class="sidebar__section-label">Análisis</div>
+
+        <a href="#rankings" class="sidebar__item" data-section="rankings">
+          <span class="sidebar__icon">&#127942;</span>
+          <span class="sidebar__label">Top 7 IAs por Tarea</span>
+        </a>
+
+      </nav>
+
+      <div class="sidebar__footer">
+        <span class="sidebar__version">v0.1.0</span>
+      </div>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <div class="content-area">
+      <main class="main">
+
+        <!-- TOP 3 NOTICIAS -->
+        <section class="section" id="noticias" aria-labelledby="news-title">
+          <div class="section__header">
+            <div class="section__icon">&#128240;</div>
+            <div>
+              <h2 class="section__title" id="news-title">Top Noticias IA</h2>
+              <p class="section__subtitle">Las 3 noticias más relevantes del día</p>
+            </div>
+          </div>
+          <div class="cards-grid">
+
+            <article class="card card--news">
+              <div class="card__top">
+                <span class="tag tag--blue">OpenAI</span>
+                <span class="card__time">Hace 2h</span>
+              </div>
+              <h3 class="card__title">GPT-5 supera benchmarks de razonamiento humano en pruebas médicas</h3>
+              <p class="card__desc">OpenAI publicó resultados donde GPT-5 alcanza el 97% de precisión en diagnósticos clínicos, superando a médicos especialistas en 4 de 6 categorías evaluadas.</p>
+              <div class="card__footer">
+                <span class="card__source">OpenAI Blog</span>
+                <button class="btn btn--ghost btn--sm">Ver más</button>
+              </div>
+            </article>
+
+            <article class="card card--news">
+              <div class="card__top">
+                <span class="tag tag--purple">Google</span>
+                <span class="card__time">Hace 5h</span>
+              </div>
+              <h3 class="card__title">Gemini Ultra integra visión en tiempo real con Google Lens</h3>
+              <p class="card__desc">Google anuncia integración nativa de Gemini Ultra con Lens para análisis de objetos, texto y escenas en tiempo real desde dispositivos móviles.</p>
+              <div class="card__footer">
+                <span class="card__source">Google DeepMind</span>
+                <button class="btn btn--ghost btn--sm">Ver más</button>
+              </div>
+            </article>
+
+            <article class="card card--news">
+              <div class="card__top">
+                <span class="tag tag--green">Investigación</span>
+                <span class="card__time">Hace 8h</span>
+              </div>
+              <h3 class="card__title">Nuevo modelo de IA predice terremotos con 72h de anticipación</h3>
+              <p class="card__desc">Investigadores del MIT presentan un modelo entrenado con datos sísmicos de 50 años que logra predecir actividad sísmica con una precisión del 89%.</p>
+              <div class="card__footer">
+                <span class="card__source">MIT Technology Review</span>
+                <button class="btn btn--ghost btn--sm">Ver más</button>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- HERRAMIENTAS IA -->
+        <section class="section" id="herramientas" aria-labelledby="tools-title">
+          <div class="section__header">
+            <div class="section__icon">&#9881;</div>
+            <div>
+              <h2 class="section__title" id="tools-title">Herramientas IA</h2>
+              <p class="section__subtitle">Herramientas destacadas para explorar</p>
+            </div>
+          </div>
+          <div class="cards-grid">
+
+            <article class="card card--tool">
+              <div class="card__top">
+                <span class="tool__emoji">&#127912;</span>
+                <span class="tag tag--yellow">Imágenes</span>
+              </div>
+              <h3 class="card__title">Midjourney v7</h3>
+              <p class="card__desc">Generación de imágenes fotorrealistas con control de estilos, iluminación y composición. Ideal para contenido visual de alta calidad en redes sociales.</p>
+              <div class="card__footer">
+                <div class="card__stats">
+                  <span class="stat">&#11088; 4.9</span>
+                  <span class="stat">&#128100; 18M usuarios</span>
+                </div>
+                <button class="btn btn--primary btn--sm">Explorar</button>
+              </div>
+            </article>
+
+            <article class="card card--tool">
+              <div class="card__top">
+                <span class="tool__emoji">&#9997;</span>
+                <span class="tag tag--blue">Escritura</span>
+              </div>
+              <h3 class="card__title">Claude 3.7 Sonnet</h3>
+              <p class="card__desc">Asistente de escritura avanzado para redacción de copys, guiones, hilos de Twitter y contenido largo con contexto extendido de 200K tokens.</p>
+              <div class="card__footer">
+                <div class="card__stats">
+                  <span class="stat">&#11088; 4.8</span>
+                  <span class="stat">&#128100; 12M usuarios</span>
+                </div>
+                <button class="btn btn--primary btn--sm">Explorar</button>
+              </div>
+            </article>
+
+            <article class="card card--tool">
+              <div class="card__top">
+                <span class="tool__emoji">&#127909;</span>
+                <span class="tag tag--red">Video</span>
+              </div>
+              <h3 class="card__title">Sora + CapCut AI</h3>
+              <p class="card__desc">Combinación para generar y editar reels con IA. Sora genera clips desde texto y CapCut aplica subtítulos, efectos y transiciones automáticamente.</p>
+              <div class="card__footer">
+                <div class="card__stats">
+                  <span class="stat">&#11088; 4.7</span>
+                  <span class="stat">&#128100; 9M usuarios</span>
+                </div>
+                <button class="btn btn--primary btn--sm">Explorar</button>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- PROMPTS / SKILLS -->
+        <section class="section" id="prompts" aria-labelledby="prompts-title">
+          <div class="section__header">
+            <div class="section__icon">&#9889;</div>
+            <div>
+              <h2 class="section__title" id="prompts-title">Prompts &amp; Skills</h2>
+              <p class="section__subtitle">Prompts listos para usar hoy</p>
+            </div>
+          </div>
+          <div class="cards-grid">
+
+            <article class="card card--prompt">
+              <div class="card__top">
+                <span class="tag tag--purple">Carrusel</span>
+                <button class="btn--copy" title="Copiar prompt" data-copy="Actúa como experto en IA. Crea un carrusel de 5 slides sobre [TEMA]. Slide 1: gancho impactante. Slides 2-4: puntos clave con dato + ejemplo. Slide 5: CTA. Usa lenguaje simple y directo.">&#128203;</button>
+              </div>
+              <h3 class="card__title">Prompt: Carrusel educativo</h3>
+              <p class="card__desc card__desc--mono">"Actúa como experto en IA. Crea un carrusel de 5 slides sobre [TEMA]. Slide 1: gancho impactante. Slides 2-4: puntos clave con dato + ejemplo. Slide 5: CTA."</p>
+              <div class="card__footer">
+                <span class="card__category">Contenido</span>
+                <span class="copy-feedback" id="copy1"></span>
+              </div>
+            </article>
+
+            <article class="card card--prompt">
+              <div class="card__top">
+                <span class="tag tag--green">Reel</span>
+                <button class="btn--copy" title="Copiar prompt" data-copy="Eres guionista de reels virales. Escribe un guion de 30 segundos sobre [TEMA IA]. Formato: Hook (3s) + Desarrollo (22s) + CTA (5s). Voz casual, activa y sin tecnicismos.">&#128203;</button>
+              </div>
+              <h3 class="card__title">Prompt: Guion de Reel 30s</h3>
+              <p class="card__desc card__desc--mono">"Eres guionista de reels virales. Escribe un guion de 30s sobre [TEMA IA]. Hook (3s) + Desarrollo (22s) + CTA (5s). Voz casual y sin tecnicismos."</p>
+              <div class="card__footer">
+                <span class="card__category">Video</span>
+                <span class="copy-feedback" id="copy2"></span>
+              </div>
+            </article>
+
+            <article class="card card--prompt">
+              <div class="card__top">
+                <span class="tag tag--blue">Post</span>
+                <button class="btn--copy" title="Copiar prompt" data-copy="Redacta un post de LinkedIn sobre [NOTICIA IA]. Estructura: 1 línea de hook + 3 insights clave + reflexión personal + pregunta al lector. Máximo 150 palabras. Tono profesional pero cercano.">&#128203;</button>
+              </div>
+              <h3 class="card__title">Prompt: Post LinkedIn IA</h3>
+              <p class="card__desc card__desc--mono">"Redacta un post de LinkedIn sobre [NOTICIA IA]. 1 línea hook + 3 insights + reflexión + pregunta. Máximo 150 palabras. Tono profesional pero cercano."</p>
+              <div class="card__footer">
+                <span class="card__category">LinkedIn</span>
+                <span class="copy-feedback" id="copy3"></span>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- IDEAS DE CONTENIDO -->
+        <section class="section" id="ideas" aria-labelledby="ideas-title">
+          <div class="section__header">
+            <div class="section__icon">&#128161;</div>
+            <div>
+              <h2 class="section__title" id="ideas-title">Ideas de Contenido</h2>
+              <p class="section__subtitle">Formatos listos para publicar hoy</p>
+            </div>
+          </div>
+          <div class="cards-grid">
+
+            <article class="card card--idea">
+              <div class="card__top">
+                <span class="tag tag--yellow">Carrusel</span>
+                <span class="idea__platform">Instagram / LinkedIn</span>
+              </div>
+              <h3 class="card__title">"5 herramientas de IA que reemplazarán tu stack en 2025"</h3>
+              <p class="card__desc">Compara herramientas legacy vs IA nativas. Slide por herramienta con antes/después. Cierra con CTA a seguirte para más actualizaciones semanales.</p>
+              <div class="card__footer">
+                <div class="idea__tags">
+                  <span class="micro-tag">&#128293; Viral</span>
+                  <span class="micro-tag">&#128202; Educativo</span>
+                </div>
+                <button class="btn btn--ghost btn--sm">Usar idea</button>
+              </div>
+            </article>
+
+            <article class="card card--idea">
+              <div class="card__top">
+                <span class="tag tag--red">Reel</span>
+                <span class="idea__platform">TikTok / Reels</span>
+              </div>
+              <h3 class="card__title">"Le pedí a 3 IAs que me explicaran la misma noticia"</h3>
+              <p class="card__desc">Formato comparativo en pantalla dividida. Muestra respuesta de GPT-5, Gemini y Claude ante la misma pregunta. Termina con tu veredicto personal de 10 segundos.</p>
+              <div class="card__footer">
+                <div class="idea__tags">
+                  <span class="micro-tag">&#128293; Viral</span>
+                  <span class="micro-tag">&#127922; Entretenido</span>
+                </div>
+                <button class="btn btn--ghost btn--sm">Usar idea</button>
+              </div>
+            </article>
+
+            <article class="card card--idea">
+              <div class="card__top">
+                <span class="tag tag--purple">Thread</span>
+                <span class="idea__platform">X / Twitter</span>
+              </div>
+              <h3 class="card__title">"Lo que los medios no te cuentan sobre la IA esta semana"</h3>
+              <p class="card__desc">Hilo de 8 tweets con noticias relevantes presentadas sin hype. Tweet 1 es el gancho, tweets 2-7 son datos, tweet 8 es reflexión + seguimiento.</p>
+              <div class="card__footer">
+                <div class="idea__tags">
+                  <span class="micro-tag">&#128202; Educativo</span>
+                  <span class="micro-tag">&#129504; Reflexivo</span>
+                </div>
+                <button class="btn btn--ghost btn--sm">Usar idea</button>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- TOP 7 IAs POR TAREA -->
+        <section class="section" id="rankings" aria-labelledby="rankings-title">
+          <div class="section__header">
+            <div class="section__icon">&#127942;</div>
+            <div>
+              <h2 class="section__title" id="rankings-title">Top 7 IAs por Tarea</h2>
+              <p class="section__subtitle">Selecciona una tarea para ver el ranking actualizado</p>
+            </div>
+          </div>
+
+          <!-- TASK SELECTOR -->
+          <div class="task-tabs" role="tablist" aria-label="Seleccionar tarea">
+            <button class="task-tab task-tab--active" role="tab" aria-selected="true"  data-task="programar">&#128187; Programar</button>
+            <button class="task-tab" role="tab" aria-selected="false" data-task="investigar">&#128269; Investigar</button>
+            <button class="task-tab" role="tab" aria-selected="false" data-task="imagenes">&#127912; Imágenes</button>
+            <button class="task-tab" role="tab" aria-selected="false" data-task="redactar">&#9997; Redactar</button>
+            <button class="task-tab" role="tab" aria-selected="false" data-task="video">&#127909; Video</button>
+            <button class="task-tab" role="tab" aria-selected="false" data-task="automatizar">&#9881; Automatizar</button>
+          </div>
+
+          <!-- RANKINGS PANEL -->
+          <div class="rankings-panel">
+
+            <!-- BAR CHART -->
+            <div class="rankings-chart card">
+              <h3 class="rankings-chart__title" id="chartTitle">Top 7 IAs para Programar</h3>
+              <div class="chart" id="rankingChart" aria-label="Gráfico de barras de ranking"></div>
+            </div>
+
+            <!-- RANKED LIST -->
+            <div class="rankings-list card">
+              <h3 class="rankings-list__title">Ranking detallado</h3>
+              <ol class="rank-list" id="rankList"></ol>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>Polaris AI Dashboard &mdash; Actualizado diariamente</span>
+        <span class="footer__version">v0.1.0</span>
+      </footer>
+    </div><!-- /content-area -->
+
+  </div><!-- /layout -->
+
+  <!-- MOBILE NAV BAR -->
+  <nav class="mobile-nav" aria-label="Navegación móvil">
+    <a href="#noticias"     class="mobile-nav__item" data-section="noticias"><span>&#128240;</span><span>Noticias</span></a>
+    <a href="#herramientas" class="mobile-nav__item" data-section="herramientas"><span>&#9881;</span><span>Herramientas</span></a>
+    <a href="#prompts"      class="mobile-nav__item" data-section="prompts"><span>&#9889;</span><span>Prompts</span></a>
+    <a href="#ideas"        class="mobile-nav__item" data-section="ideas"><span>&#128161;</span><span>Ideas</span></a>
+    <a href="#rankings"     class="mobile-nav__item" data-section="rankings"><span>&#127942;</span><span>Rankings</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
