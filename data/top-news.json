@@ -1,1 +1,52 @@
-
+{
+  "generadoEn": "2026-03-27T21:35:41.856Z",
+  "fuente": "https://www.technologyreview.com/feed/",
+  "totalNoticias": 5,
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "The Download: the internet’s best weather app, and why people freeze their brains",
+      "descripcion": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. How a couple of ski bums built the internet’s best weather app The best snow-forecasting app for skiers isn’t a federally-funded service or a big-name brand. It’s",
+      "enlace": "https://www.technologyreview.com/2026/03/27/1134755/the-download-best-weather-forecasting-app-why-people-freeze-brains/",
+      "publicado": "Fri, 27 Mar 2026 12:32:54 +0000",
+      "fuente": "MIT Technology Review",
+      "fechaScraping": "2026-03-27T21:35:41.854Z"
+    },
+    {
+      "id": 2,
+      "titulo": "Here’s why some people choose cryonics to store their bodies and brains after death",
+      "descripcion": "This week I reported on some rather unusual research that focuses on the brain of L. Stephen Coles. Coles was a gerontologist who died from pancreatic cancer in 2014. He had spent the latter part of his career specializing in human longevity. And before he died, he decided to have his brain preserve",
+      "enlace": "https://www.technologyreview.com/2026/03/27/1134705/cryonics-store-bodies-brains-after-death/",
+      "publicado": "Fri, 27 Mar 2026 09:00:00 +0000",
+      "fuente": "MIT Technology Review",
+      "fechaScraping": "2026-03-27T21:35:41.856Z"
+    },
+    {
+      "id": 3,
+      "titulo": "The Download: a battery pivot to AI, and rewriting math",
+      "descripcion": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Why this battery company is pivoting to AI Qichao Hu doesn’t mince words about the state of the battery industry. “Almost every Western battery company has either",
+      "enlace": "https://www.technologyreview.com/2026/03/26/1134697/the-download-battery-ai-pivot-new-ai-tool-math/",
+      "publicado": "Thu, 26 Mar 2026 12:42:53 +0000",
+      "fuente": "MIT Technology Review",
+      "fechaScraping": "2026-03-27T21:35:41.856Z"
+    },
+    {
+      "id": 4,
+      "titulo": "The snow gods: How a couple of ski bums built the internet’s best weather app",
+      "descripcion": "The best snow-forecasting app for skiers and snowboarders isn’t from any of the federally funded weather services. Nor from any of the big-name brands. It’s an independent app startup that leverages government data, its own AI models, and decades of alpine-life experience to offer better snow (and s",
+      "enlace": "https://www.technologyreview.com/2026/03/26/1134470/the-snow-gods-how-a-couple-of-ski-bums-built-the-internets-best-weather-app/",
+      "publicado": "Thu, 26 Mar 2026 10:00:00 +0000",
+      "fuente": "MIT Technology Review",
+      "fechaScraping": "2026-03-27T21:35:41.856Z"
+    },
+    {
+      "id": 5,
+      "titulo": "Roundtables: The Next Era of Space Exploration",
+      "descripcion": "Listen to the session or watch below Whether it’s the race to find life on Mars, the campaign to outsmart killer asteroids, or the quest to make the moon a permanent home to astronauts, scientists’ efforts in space can tell us more about where humanity is headed. This subscriber-only discussion exam",
+      "enlace": "https://www.technologyreview.com/2026/03/25/1134664/roundtables-the-next-era-of-space-exploration/",
+      "publicado": "Wed, 25 Mar 2026 17:26:26 +0000",
+      "fuente": "MIT Technology Review",
+      "fechaScraping": "2026-03-27T21:35:41.856Z"
+    }
+  ]
+}
