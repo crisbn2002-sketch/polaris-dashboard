@@ -406,56 +406,41 @@ function renderTicker(data) {
 // Replace these with real fetch() calls when API is ready:
 //   async function fetchStocks()  { return fetch('/api/stocks').then(r => r.json());  }
 
-function relativeTime(dateStr) {
-  const diff = Date.now() - new Date(dateStr).getTime();
-  const h = Math.floor(diff / 3_600_000);
-  if (h < 1)  return 'Hace menos de 1h';
-  if (h < 24) return `Hace ${h}h`;
-  const d = Math.floor(h / 24);
-  return `Hace ${d}d`;
-}
-
-function extractHook(text) {
-  const sentence = text.split(/\.\s+/)[0];
-  return sentence.length > 110 ? sentence.slice(0, 107) + '…' : sentence;
-}
-
-async function fetchNoticias() {
+async function fetchContent() {
   try {
-    const res  = await fetch('data/top-news.json');
+    const res  = await fetch('data/dashboard-data-structure.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    return json.noticias.slice(0, 3).map(n => ({
-      title:      n.titulo,
-      summary:    n.descripcion,
-      hook:       extractHook(n.descripcion),
-      source_url: n.enlace,
-      category:   n.fuente,
-      tag_color:  'blue',
-      time:       relativeTime(n.publicado),
-    }));
+    return {
+      noticias:     json.noticias,
+      herramientas: json.herramientas,
+      ideas:        json.ideas,
+    };
   } catch (err) {
-    console.warn('[Polaris] top-news.json no disponible, usando datos de ejemplo.', err);
-    return NOTICIAS_DATA;
+    console.warn('[Polaris] dashboard-data-structure.json no disponible, usando datos de ejemplo.', err);
+    return {
+      noticias:     NOTICIAS_DATA,
+      herramientas: HERRAMIENTAS_DATA,
+      ideas:        IDEAS_DATA,
+    };
   }
-}
-
-async function fetchContent() {
-  const noticias = await fetchNoticias();
-  return {
-    noticias,
-    herramientas: HERRAMIENTAS_DATA,
-    ideas:        IDEAS_DATA,
-  };
 }
 
 // ===== FETCH STUBS: TRENDING =====
 // n8n can update data/trending-prompts.json and data/trending-skills.json independently
 async function fetchTrendingPrompts() {
   try {
-    const res = await fetch('data/trending-prompts.json');
+    const res  = await fetch('data/dashboard-data-structure.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return (await res.json()).prompts.slice(0, 3);
+    const json = await res.json();
+    return json.prompts.map(p => ({
+      title:       p.title,
+      desc:        p.summary,
+      uso:         p.format,
+      category:    p.category,
+      tag_color:   p.tag_color,
+      full_prompt: p.full_prompt,
+    }));
   } catch {
     return trendingPrompts;
   }
