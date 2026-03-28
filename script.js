@@ -174,9 +174,9 @@ const HERRAMIENTAS_DATA = [
   },
 ];
 
-// --- TRENDING PROMPTS ---
+// --- TRENDING PROMPTS (fallback de emergencia) ---
 // Shape: { title, desc, uso, category, tag_color, full_prompt }
-// Replace with fetch('data/trending-prompts.json') when n8n updates this file
+// Fuente real: json.prompts en data/dashboard-data-structure.json
 const trendingPrompts = [
   {
     title:      'Carrusel educativo IA',
@@ -204,9 +204,9 @@ const trendingPrompts = [
   },
 ];
 
-// --- TRENDING SKILLS ---
+// --- TRENDING SKILLS (fallback de emergencia) ---
 // Shape: { name, desc, para_que, utilidad, tag_color }
-// Replace with fetch('data/trending-skills.json') when n8n updates this file
+// Fuente real: json.trending_skills en data/dashboard-data-structure.json
 const trendingSkills = [
   {
     name:      'Prompt Engineering',
@@ -426,8 +426,7 @@ async function fetchContent() {
   }
 }
 
-// ===== FETCH STUBS: TRENDING =====
-// n8n can update data/trending-prompts.json and data/trending-skills.json independently
+// ===== FETCH: TRENDING =====
 async function fetchTrendingPrompts() {
   try {
     const res  = await fetch('data/dashboard-data-structure.json');
@@ -448,9 +447,10 @@ async function fetchTrendingPrompts() {
 
 async function fetchTrendingSkills() {
   try {
-    const res = await fetch('data/trending-skills.json');
+    const res = await fetch('data/dashboard-data-structure.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return (await res.json()).skills.slice(0, 3);
+    const json = await res.json();
+    return json.trending_skills.slice(0, 3);
   } catch {
     return trendingSkills;
   }
