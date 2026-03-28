@@ -39,7 +39,7 @@ window.addEventListener('resize', () => {
 });
 
 // ===== ACTIVE NAV (Intersection Observer) =====
-const sections     = document.querySelectorAll('.section[id]');
+const sections     = document.querySelectorAll('.section[id], .trending-block[id]');
 const sidebarItems = document.querySelectorAll('.sidebar__item[data-section]');
 const mobileItems  = document.querySelectorAll('.mobile-nav__item[data-section]');
 
@@ -55,7 +55,11 @@ const observer = new IntersectionObserver(
 sections.forEach(s => observer.observe(s));
 
 [...sidebarItems, ...mobileItems].forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href')?.replace('#', '');
+    const target   = targetId ? document.getElementById(targetId) : null;
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     if (isMobile()) {
       sidebar.classList.remove('sidebar--open');
       backdrop.classList.remove('active');
@@ -170,32 +174,60 @@ const HERRAMIENTAS_DATA = [
   },
 ];
 
-// --- PROMPTS ---
-// Shape: { title, summary, full_prompt, category, tag_color, format }
-const PROMPTS_DATA = [
+// --- TRENDING PROMPTS ---
+// Shape: { title, desc, uso, category, tag_color, full_prompt }
+// Replace with fetch('data/trending-prompts.json') when n8n updates this file
+const trendingPrompts = [
   {
-    title:       'Prompt: Carrusel educativo',
-    summary:     '"Actúa como experto en IA. Crea un carrusel de 5 slides sobre [TEMA]. Slide 1: gancho impactante. Slides 2-4: puntos clave con dato + ejemplo. Slide 5: CTA."',
+    title:      'Carrusel educativo IA',
+    desc:       'Genera 5 slides con gancho, puntos clave con datos y CTA para cualquier tema de IA.',
+    uso:        'Instagram / LinkedIn',
+    category:   'Carrusel',
+    tag_color:  'purple',
     full_prompt: 'Actúa como experto en IA. Crea un carrusel de 5 slides sobre [TEMA]. Slide 1: gancho impactante. Slides 2-4: puntos clave con dato + ejemplo. Slide 5: CTA. Usa lenguaje simple y directo.',
-    category:    'Carrusel',
-    tag_color:   'purple',
-    format:      'Contenido',
   },
   {
-    title:       'Prompt: Guion de Reel 30s',
-    summary:     '"Eres guionista de reels virales. Escribe un guion de 30s sobre [TEMA IA]. Hook (3s) + Desarrollo (22s) + CTA (5s). Voz casual y sin tecnicismos."',
+    title:      'Guion Reel 30 segundos',
+    desc:       'Hook de impacto + desarrollo conciso + CTA. Tono casual, sin tecnicismos.',
+    uso:        'TikTok / Reels',
+    category:   'Video',
+    tag_color:  'green',
     full_prompt: 'Eres guionista de reels virales. Escribe un guion de 30 segundos sobre [TEMA IA]. Formato: Hook (3s) + Desarrollo (22s) + CTA (5s). Voz casual, activa y sin tecnicismos.',
-    category:    'Reel',
-    tag_color:   'green',
-    format:      'Video',
   },
   {
-    title:       'Prompt: Post LinkedIn IA',
-    summary:     '"Redacta un post de LinkedIn sobre [NOTICIA IA]. 1 línea hook + 3 insights + reflexión + pregunta. Máximo 150 palabras. Tono profesional pero cercano."',
+    title:      'Post LinkedIn IA',
+    desc:       '150 palabras: hook + 3 insights + reflexión + pregunta de cierre al lector.',
+    uso:        'LinkedIn',
+    category:   'Post',
+    tag_color:  'blue',
     full_prompt: 'Redacta un post de LinkedIn sobre [NOTICIA IA]. Estructura: 1 línea de hook + 3 insights clave + reflexión personal + pregunta al lector. Máximo 150 palabras. Tono profesional pero cercano.',
-    category:    'Post',
-    tag_color:   'blue',
-    format:      'LinkedIn',
+  },
+];
+
+// --- TRENDING SKILLS ---
+// Shape: { name, desc, para_que, utilidad, tag_color }
+// Replace with fetch('data/trending-skills.json') when n8n updates this file
+const trendingSkills = [
+  {
+    name:      'Prompt Engineering',
+    desc:      'Diseñar instrucciones precisas para obtener respuestas óptimas de cualquier LLM.',
+    para_que:  'Mejorar la calidad de outputs en automatizaciones y generación de contenido.',
+    utilidad:  'Muy Alta',
+    tag_color: 'purple',
+  },
+  {
+    name:      'AI Workflow Automation',
+    desc:      'Conectar herramientas de IA con n8n o Make para flujos de trabajo sin código.',
+    para_que:  'Automatizar tareas repetitivas y escalar la producción de contenido.',
+    utilidad:  'Muy Alta',
+    tag_color: 'green',
+  },
+  {
+    name:      'Visual AI Branding',
+    desc:      'Usar Midjourney y herramientas visuales para crear identidad de marca coherente.',
+    para_que:  'Generar assets visuales profesionales sin necesidad de diseñador.',
+    utilidad:  'Alta',
+    tag_color: 'yellow',
   },
 ];
 
@@ -279,24 +311,43 @@ function renderHerramientas(data) {
   `).join('');
 }
 
-// ===== RENDER: PROMPTS =====
-function renderPrompts(data) {
-  const grid = document.getElementById('promptsGrid');
-  if (!grid) return;
-  grid.innerHTML = data.map((item, i) => `
-    <article class="card card--prompt">
-      <div class="card__top">
+// ===== RENDER: TRENDING PROMPTS =====
+function renderTrendingPrompts(data) {
+  const container = document.getElementById('trendingPromptsGrid');
+  if (!container) return;
+  container.innerHTML = data.map((item, i) => `
+    <article class="trend-card trend-card--prompt">
+      <div class="trend-card__top">
         <span class="tag tag--${item.tag_color}">${item.category}</span>
         <button class="btn--copy" title="Copiar prompt" data-copy="${item.full_prompt.replace(/"/g, '&quot;')}">📋</button>
       </div>
-      <h3 class="card__title">${item.title}</h3>
-      <p class="card__desc card__desc--mono">${item.summary}</p>
-      <div class="card__footer">
-        <span class="card__category">${item.format}</span>
-        <span class="copy-feedback" id="copy${i + 1}"></span>
+      <h3 class="trend-card__title">${item.title}</h3>
+      <p class="trend-card__desc">${item.desc}</p>
+      <div class="trend-card__meta">
+        <span class="trend-card__uso">${item.uso}</span>
+        <span class="copy-feedback" id="tcopy${i}"></span>
       </div>
     </article>
   `).join('');
+}
+
+// ===== RENDER: TRENDING SKILLS =====
+function renderTrendingSkills(data) {
+  const container = document.getElementById('trendingSkillsGrid');
+  if (!container) return;
+  container.innerHTML = data.map(item => {
+    const utilClass = item.utilidad === 'Muy Alta' ? 'muy-alta' : 'alta';
+    return `
+      <article class="trend-card trend-card--skill">
+        <div class="trend-card__top">
+          <h3 class="trend-card__title">${item.name}</h3>
+          <span class="util-badge util-badge--${utilClass}">${item.utilidad}</span>
+        </div>
+        <p class="trend-card__desc">${item.desc}</p>
+        <p class="trend-card__para-que">&#128161; ${item.para_que}</p>
+      </article>
+    `;
+  }).join('');
 }
 
 // ===== RENDER: IDEAS =====
@@ -394,9 +445,30 @@ async function fetchContent() {
   return {
     noticias,
     herramientas: HERRAMIENTAS_DATA,
-    prompts:      PROMPTS_DATA,
     ideas:        IDEAS_DATA,
   };
+}
+
+// ===== FETCH STUBS: TRENDING =====
+// n8n can update data/trending-prompts.json and data/trending-skills.json independently
+async function fetchTrendingPrompts() {
+  try {
+    const res = await fetch('data/trending-prompts.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return (await res.json()).prompts.slice(0, 3);
+  } catch {
+    return trendingPrompts;
+  }
+}
+
+async function fetchTrendingSkills() {
+  try {
+    const res = await fetch('data/trending-skills.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return (await res.json()).skills.slice(0, 3);
+  } catch {
+    return trendingSkills;
+  }
 }
 
 async function fetchStocks() {
@@ -416,8 +488,15 @@ function scheduleContentRefresh() {
     const data = await fetchContent();
     renderNoticias(data.noticias);
     renderHerramientas(data.herramientas);
-    renderPrompts(data.prompts);
     renderIdeas(data.ideas);
+  }, REFRESH_CONTENT_MS);
+}
+
+function scheduleTrendingRefresh() {
+  setInterval(async () => {
+    const [prompts, skills] = await Promise.all([fetchTrendingPrompts(), fetchTrendingSkills()]);
+    renderTrendingPrompts(prompts);
+    renderTrendingSkills(skills);
   }, REFRESH_CONTENT_MS);
 }
 
@@ -434,8 +513,12 @@ function scheduleStockRefresh() {
   const data = await fetchContent();
   renderNoticias(data.noticias);
   renderHerramientas(data.herramientas);
-  renderPrompts(data.prompts);
   renderIdeas(data.ideas);
+
+  // Trending (right panel)
+  const [prompts, skills] = await Promise.all([fetchTrendingPrompts(), fetchTrendingSkills()]);
+  renderTrendingPrompts(prompts);
+  renderTrendingSkills(skills);
 
   // Ticker
   renderTicker(STOCKS_DATA);
@@ -445,6 +528,7 @@ function scheduleStockRefresh() {
 
   // Schedulers
   scheduleContentRefresh();
+  scheduleTrendingRefresh();
   scheduleStockRefresh();
 })();
 

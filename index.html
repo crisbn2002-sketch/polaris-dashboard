@@ -51,11 +51,7 @@
         </a>
         <a href="#prompts" class="sidebar__item" data-section="prompts">
           <span class="sidebar__icon">&#9889;</span>
-          <span class="sidebar__label">Prompts &amp; Skills</span>
-        </a>
-        <a href="#ideas" class="sidebar__item" data-section="ideas">
-          <span class="sidebar__icon">&#128161;</span>
-          <span class="sidebar__label">Ideas de Contenido</span>
+          <span class="sidebar__label">Prompts en tendencia</span>
         </a>
 
         <div class="sidebar__divider"></div>
@@ -100,20 +96,6 @@
             </div>
           </div>
           <div class="cards-grid" id="herramientasGrid">
-            <!-- rendered by JS -->
-          </div>
-        </section>
-
-        <!-- PROMPTS / SKILLS -->
-        <section class="section" id="prompts" aria-labelledby="prompts-title">
-          <div class="section__header">
-            <div class="section__icon">&#9889;</div>
-            <div>
-              <h2 class="section__title" id="prompts-title">Prompts &amp; Skills</h2>
-              <p class="section__subtitle">Prompts listos para usar hoy</p>
-            </div>
-          </div>
-          <div class="cards-grid" id="promptsGrid">
             <!-- rendered by JS -->
           </div>
         </section>
@@ -165,6 +147,33 @@
 
       </main>
 
+      <!-- RIGHT PANEL: TRENDING -->
+      <aside class="right-panel" id="rightPanel">
+
+        <!-- 3 PROMPTS EN TENDENCIA -->
+        <section class="trending-block" id="prompts" aria-labelledby="trending-prompts-title">
+          <div class="trending-block__header">
+            <span class="trending-block__icon">&#9889;</span>
+            <h2 class="trending-block__title" id="trending-prompts-title">3 Prompts en tendencia</h2>
+          </div>
+          <div class="trending-list" id="trendingPromptsGrid">
+            <!-- rendered by JS -->
+          </div>
+        </section>
+
+        <!-- 3 SKILLS EN TENDENCIA -->
+        <section class="trending-block" id="skills" aria-labelledby="trending-skills-title">
+          <div class="trending-block__header">
+            <span class="trending-block__icon">&#127919;</span>
+            <h2 class="trending-block__title" id="trending-skills-title">3 Skills en tendencia</h2>
+          </div>
+          <div class="trending-list" id="trendingSkillsGrid">
+            <!-- rendered by JS -->
+          </div>
+        </section>
+
+      </aside>
+
       <!-- FOOTER -->
       <footer class="footer">
         <span>Polaris AI Dashboard &mdash; Actualizado diariamente</span>
@@ -179,6 +188,7 @@
     <a href="#noticias"     class="mobile-nav__item" data-section="noticias"><span>&#128240;</span><span>Noticias</span></a>
     <a href="#herramientas" class="mobile-nav__item" data-section="herramientas"><span>&#9881;</span><span>Tools</span></a>
     <a href="#prompts"      class="mobile-nav__item" data-section="prompts"><span>&#9889;</span><span>Prompts</span></a>
+    <a href="#skills"       class="mobile-nav__item" data-section="skills"><span>&#127919;</span><span>Skills</span></a>
     <a href="#ideas"        class="mobile-nav__item" data-section="ideas"><span>&#128161;</span><span>Ideas</span></a>
     <a href="#rankings"     class="mobile-nav__item" data-section="rankings"><span>&#127942;</span><span>Rankings</span></a>
   </nav>
