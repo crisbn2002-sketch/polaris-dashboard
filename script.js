@@ -104,37 +104,7 @@ let STOCKS_DATA = [
   { ticker: 'MSTR', name: 'MicroStrategy', price: 1284.50, change: +18.20, changePct: +1.44 },
 ];
 
-// --- NOTICIAS ---
-// Shape: { title, summary, hook, source_url, category, tag_color, time }
-const NOTICIAS_DATA = [
-  {
-    title:      'GPT-5 supera benchmarks de razonamiento humano en pruebas médicas',
-    summary:    'OpenAI publicó resultados donde GPT-5 alcanza el 97% de precisión en diagnósticos clínicos, superando a médicos especialistas en 4 de 6 categorías evaluadas.',
-    hook:       '¿Puede una IA superar a tu médico?',
-    source_url: 'https://openai.com/blog',
-    category:   'OpenAI',
-    tag_color:  'blue',
-    time:       'Hace 2h',
-  },
-  {
-    title:      'Gemini Ultra integra visión en tiempo real con Google Lens',
-    summary:    'Google anuncia integración nativa de Gemini Ultra con Lens para análisis de objetos, texto y escenas en tiempo real desde dispositivos móviles.',
-    hook:       'Tu cámara ahora tiene cerebro.',
-    source_url: 'https://deepmind.google',
-    category:   'Google',
-    tag_color:  'purple',
-    time:       'Hace 5h',
-  },
-  {
-    title:      'Nuevo modelo de IA predice terremotos con 72h de anticipación',
-    summary:    'Investigadores del MIT presentan un modelo entrenado con datos sísmicos de 50 años que logra predecir actividad sísmica con una precisión del 89%.',
-    hook:       'La IA que salvaría millones de vidas.',
-    source_url: 'https://www.technologyreview.com',
-    category:   'Investigación',
-    tag_color:  'green',
-    time:       'Hace 8h',
-  },
-];
+// --- NOTICIAS --- (datos dinámicos via /api/news/top)
 
 // --- HERRAMIENTAS ---
 // Shape: { title, summary, hook, source_url, category, tag_color, emoji, rating, users }
@@ -261,27 +231,54 @@ const IDEAS_DATA = [
 ];
 
 // ===== RENDER: NOTICIAS =====
-function renderNoticias(data) {
+function renderNoticiasSkeleton() {
   const grid = document.getElementById('noticiasGrid');
   if (!grid) return;
-  grid.innerHTML = data.map(item => `
+  grid.innerHTML = `
     <article class="card card--news">
       <div class="card__top">
-        <span class="tag tag--${item.tag_color}">${item.category}</span>
-        <span class="card__time">${item.time}</span>
+        <span class="skel skel--tag"></span>
+        <span class="skel skel--time"></span>
+      </div>
+      <span class="skel skel--hook"></span>
+      <span class="skel skel--title"></span>
+      <span class="skel skel--desc"></span>
+      <div class="card__footer">
+        <span class="skel skel--source"></span>
+        <span class="skel skel--btn"></span>
+      </div>
+    </article>`;
+}
+
+function renderTopNoticia(item) {
+  const grid = document.getElementById('noticiasGrid');
+  if (!grid) return;
+
+  if (!item) {
+    grid.innerHTML = `
+      <article class="card card--news">
+        <p class="card__desc" style="text-align:center;padding:1rem 0;color:var(--text-muted);">No hay noticias disponibles.</p>
+      </article>`;
+    return;
+  }
+
+  grid.innerHTML = `
+    <article class="card card--news">
+      <div class="card__top">
+        <span class="tag tag--blue">${item.badge}</span>
+        <span class="card__time">${item.date}</span>
       </div>
       <p class="card__hook">${item.hook}</p>
       <h3 class="card__title">${item.title}</h3>
       <p class="card__desc">${item.summary}</p>
       <div class="card__footer">
-        <span class="card__source">${item.category}</span>
+        <span class="card__source">${item.footer_label}</span>
         <a class="btn btn--ghost btn--sm"
            href="${item.source_url}"
            target="_blank"
            rel="noopener noreferrer">Ver más ↗</a>
       </div>
-    </article>
-  `).join('');
+    </article>`;
 }
 
 // ===== RENDER: HERRAMIENTAS =====
@@ -406,20 +403,30 @@ function renderTicker(data) {
 // Replace these with real fetch() calls when API is ready:
 //   async function fetchStocks()  { return fetch('/api/stocks').then(r => r.json());  }
 
+async function fetchTopNoticia() {
+  try {
+    const res = await fetch('/api/news/top');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    return (json.success && json.item) ? json.item : null;
+  } catch (err) {
+    console.warn('[Polaris] /api/news/top no disponible.', err);
+    return null;
+  }
+}
+
 async function fetchContent() {
   try {
     const res  = await fetch('data/dashboard-data-structure.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
     return {
-      noticias:     json.noticias,
       herramientas: json.herramientas,
       ideas:        json.ideas,
     };
   } catch (err) {
     console.warn('[Polaris] dashboard-data-structure.json no disponible, usando datos de ejemplo.', err);
     return {
-      noticias:     NOTICIAS_DATA,
       herramientas: HERRAMIENTAS_DATA,
       ideas:        IDEAS_DATA,
     };
@@ -470,8 +477,8 @@ async function fetchStocks() {
 // ===== REFRESH SCHEDULERS =====
 function scheduleContentRefresh() {
   setInterval(async () => {
-    const data = await fetchContent();
-    renderNoticias(data.noticias);
+    const [noticia, data] = await Promise.all([fetchTopNoticia(), fetchContent()]);
+    renderTopNoticia(noticia);
     renderHerramientas(data.herramientas);
     renderIdeas(data.ideas);
   }, REFRESH_CONTENT_MS);
@@ -495,8 +502,9 @@ function scheduleStockRefresh() {
 // ===== INIT =====
 (async function init() {
   // Content
-  const data = await fetchContent();
-  renderNoticias(data.noticias);
+  renderNoticiasSkeleton();
+  const [noticia, data] = await Promise.all([fetchTopNoticia(), fetchContent()]);
+  renderTopNoticia(noticia);
   renderHerramientas(data.herramientas);
   renderIdeas(data.ideas);
 
