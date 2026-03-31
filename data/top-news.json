@@ -1,12 +1,12 @@
 {
   "success": true,
   "item": {
-    "badge": "AI",
-    "date": "30-03-2026",
-    "hook": "⚡ texto",
-    "title": "texto",
-    "summary": "texto",
-    "footer_label": "AI",
-    "source_url": "https://..."
+    "badge": "OPENAI",
+    "date": "31-03-2026",
+    "hook": "⚡ OpenAI abandona Sora",
+    "title": "OpenAI cierra Sora y pivota hacia robótica",
+    "summary": "OpenAI decidió detener Sora para enfocarse en simulación de mundos.",
+    "footer_label": "OpenAI",
+    "source_url": "https://example.com"
   }
 }
