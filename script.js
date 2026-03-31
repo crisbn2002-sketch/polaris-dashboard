@@ -234,7 +234,7 @@ const IDEAS_DATA = [
 function renderNoticiasSkeleton() {
   const grid = document.getElementById('noticiasGrid');
   if (!grid) return;
-  grid.innerHTML = `
+  const skelCard = `
     <article class="card card--news">
       <div class="card__top">
         <span class="skel skel--tag"></span>
@@ -248,13 +248,14 @@ function renderNoticiasSkeleton() {
         <span class="skel skel--btn"></span>
       </div>
     </article>`;
+  grid.innerHTML = skelCard + skelCard + skelCard;
 }
 
-function renderTopNoticia(item) {
+function renderTopNoticias(items) {
   const grid = document.getElementById('noticiasGrid');
   if (!grid) return;
 
-  if (!item) {
+  if (!items || items.length === 0) {
     grid.innerHTML = `
       <article class="card card--news">
         <p class="card__desc" style="text-align:center;padding:1rem 0;color:var(--text-muted);">No hay noticias disponibles.</p>
@@ -262,7 +263,7 @@ function renderTopNoticia(item) {
     return;
   }
 
-  grid.innerHTML = `
+  grid.innerHTML = items.slice(0, 3).map(item => `
     <article class="card card--news">
       <div class="card__top">
         <span class="tag tag--blue">${item.badge}</span>
@@ -278,7 +279,7 @@ function renderTopNoticia(item) {
            target="_blank"
            rel="noopener noreferrer">Ver más ↗</a>
       </div>
-    </article>`;
+    </article>`).join('');
 }
 
 // ===== RENDER: HERRAMIENTAS =====
@@ -408,7 +409,7 @@ async function fetchTopNoticia() {
     const res = await fetch('data/top-news.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    return (json.success && json.item) ? json.item : null;
+    return (json.success && Array.isArray(json.items)) ? json.items : [];
   } catch (err) {
     console.warn('[Polaris] data/top-news.json no disponible.', err);
     return null;
@@ -478,7 +479,7 @@ async function fetchStocks() {
 function scheduleContentRefresh() {
   setInterval(async () => {
     const [noticia, data] = await Promise.all([fetchTopNoticia(), fetchContent()]);
-    renderTopNoticia(noticia);
+    renderTopNoticias(noticia);
     renderHerramientas(data.herramientas);
     renderIdeas(data.ideas);
   }, REFRESH_CONTENT_MS);
@@ -504,7 +505,7 @@ function scheduleStockRefresh() {
   // Content
   renderNoticiasSkeleton();
   const [noticia, data] = await Promise.all([fetchTopNoticia(), fetchContent()]);
-  renderTopNoticia(noticia);
+  renderTopNoticias(noticia);
   renderHerramientas(data.herramientas);
   renderIdeas(data.ideas);
 
