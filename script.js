@@ -405,12 +405,12 @@ function renderTicker(data) {
 
 async function fetchTopNoticia() {
   try {
-    const res = await fetch('/api/news/top');
+    const res = await fetch('data/top-news.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
     return (json.success && json.item) ? json.item : null;
   } catch (err) {
-    console.warn('[Polaris] /api/news/top no disponible.', err);
+    console.warn('[Polaris] data/top-news.json no disponible.', err);
     return null;
   }
 }
