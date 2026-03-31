@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "item": {
+    "badge": "AI",
+    "date": "30-03-2026",
+    "hook": "⚡ texto",
+    "title": "texto",
+    "summary": "texto",
+    "footer_label": "AI",
+    "source_url": "https://..."
+  }
+}
