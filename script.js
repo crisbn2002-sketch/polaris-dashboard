@@ -107,40 +107,43 @@ let STOCKS_DATA = [
 // --- NOTICIAS --- (datos dinámicos via /api/news/top)
 
 // --- HERRAMIENTAS ---
-// Shape: { title, summary, hook, source_url, category, tag_color, emoji, rating, users }
+// Shape (ai-tools.json contract): { name, description, category, tag_color, emoji, rating, users, platform, difficulty, url }
 const HERRAMIENTAS_DATA = [
   {
-    title:      'Midjourney v7',
-    summary:    'Generación de imágenes fotorrealistas con control de estilos, iluminación y composición. Ideal para contenido visual de alta calidad en redes sociales.',
-    hook:       'Imagina. Genera. Publica.',
-    source_url: 'https://www.midjourney.com',
-    category:   'Imágenes',
-    tag_color:  'yellow',
-    emoji:      '🎨',
-    rating:     '4.9',
-    users:      '18M',
+    name:        'Midjourney v7',
+    description: 'Generación de imágenes fotorrealistas con control de estilos, iluminación y composición. Ideal para contenido visual de alta calidad en redes sociales.',
+    url:         'https://www.midjourney.com',
+    category:    'Imágenes',
+    tag_color:   'yellow',
+    emoji:       '🎨',
+    rating:      4.9,
+    users:       '18M',
+    platform:    'Web',
+    difficulty:  'Media',
   },
   {
-    title:      'Claude 3.7 Sonnet',
-    summary:    'Asistente de escritura avanzado para redacción de copys, guiones, hilos de Twitter y contenido largo con contexto extendido de 200K tokens.',
-    hook:       'El escritor que nunca se cansa.',
-    source_url: 'https://claude.ai',
-    category:   'Escritura',
-    tag_color:  'blue',
-    emoji:      '✏️',
-    rating:     '4.8',
-    users:      '12M',
+    name:        'Claude 3.7 Sonnet',
+    description: 'Asistente de escritura avanzado para redacción de copys, guiones, hilos de Twitter y contenido largo con contexto extendido de 200K tokens.',
+    url:         'https://claude.ai',
+    category:    'Escritura',
+    tag_color:   'blue',
+    emoji:       '✏️',
+    rating:      4.8,
+    users:       '12M',
+    platform:    'Web, iOS, Android',
+    difficulty:  'Baja',
   },
   {
-    title:      'Sora + CapCut AI',
-    summary:    'Combinación para generar y editar reels con IA. Sora genera clips desde texto y CapCut aplica subtítulos, efectos y transiciones automáticamente.',
-    hook:       'De texto a viral en minutos.',
-    source_url: 'https://sora.com',
-    category:   'Video',
-    tag_color:  'red',
-    emoji:      '🎬',
-    rating:     '4.7',
-    users:      '9M',
+    name:        'Sora + CapCut AI',
+    description: 'Combinación para generar y editar reels con IA. Sora genera clips desde texto y CapCut aplica subtítulos, efectos y transiciones automáticamente.',
+    url:         'https://sora.com',
+    category:    'Video',
+    tag_color:   'red',
+    emoji:       '🎬',
+    rating:      4.7,
+    users:       '9M',
+    platform:    'Web, iOS',
+    difficulty:  'Media',
   },
 ];
 
@@ -283,25 +286,35 @@ function renderTopNoticias(items) {
 }
 
 // ===== RENDER: HERRAMIENTAS =====
+// Contrato: data/ai-tools.json → { success, items: [{ name, description, category, emoji, rating, users, platform, difficulty, url, tag_color }] }
 function renderHerramientas(data) {
   const grid = document.getElementById('herramientasGrid');
   if (!grid) return;
+
+  if (!data || data.length === 0) {
+    grid.innerHTML = `
+      <article class="card card--tool">
+        <p class="card__desc" style="text-align:center;padding:1rem 0;color:var(--text-muted);">No hay herramientas disponibles.</p>
+      </article>`;
+    return;
+  }
+
   grid.innerHTML = data.map(item => `
     <article class="card card--tool">
       <div class="card__top">
         <span class="tool__emoji">${item.emoji}</span>
         <span class="tag tag--${item.tag_color}">${item.category}</span>
       </div>
-      <h3 class="card__title">${item.title}</h3>
-      <p class="card__hook">${item.hook}</p>
-      <p class="card__desc">${item.summary}</p>
+      <h3 class="card__title">${item.name}</h3>
+      <p class="card__hook">${item.platform} · Dificultad: ${item.difficulty}</p>
+      <p class="card__desc">${item.description}</p>
       <div class="card__footer">
         <div class="card__stats">
           <span class="stat">⭐ ${item.rating}</span>
           <span class="stat">👤 ${item.users} usuarios</span>
         </div>
         <a class="btn btn--primary btn--sm"
-           href="${item.source_url}"
+           href="${item.url}"
            target="_blank"
            rel="noopener noreferrer">Explorar ↗</a>
       </div>
@@ -404,33 +417,48 @@ function renderTicker(data) {
 // Replace these with real fetch() calls when API is ready:
 //   async function fetchStocks()  { return fetch('/api/stocks').then(r => r.json());  }
 
+// ===== FETCH: NOTICIAS =====
+// Contrato: data/top-news.json → { success, item: {...} }  (o items: [...] si n8n envía array)
 async function fetchTopNoticia() {
   try {
     const res = await fetch('data/top-news.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    return (json.success && Array.isArray(json.items)) ? json.items : [];
+    if (!json.success) return null;
+    // Soporta contrato singular (item) y plural (items) para compatibilidad
+    if (json.item)                    return [json.item];
+    if (Array.isArray(json.items))    return json.items;
+    return null;
   } catch (err) {
     console.warn('[Polaris] data/top-news.json no disponible.', err);
     return null;
   }
 }
 
+// ===== FETCH: HERRAMIENTAS =====
+// Contrato: data/ai-tools.json → { success, items: [...] }
+async function fetchHerramientas() {
+  try {
+    const res = await fetch('data/ai-tools.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    return (json.success && Array.isArray(json.items)) ? json.items : HERRAMIENTAS_DATA;
+  } catch (err) {
+    console.warn('[Polaris] data/ai-tools.json no disponible, usando datos de ejemplo.', err);
+    return HERRAMIENTAS_DATA;
+  }
+}
+
+// ===== FETCH: IDEAS + CONTENIDO GENERAL =====
 async function fetchContent() {
   try {
     const res  = await fetch('data/dashboard-data-structure.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    return {
-      herramientas: json.herramientas,
-      ideas:        json.ideas,
-    };
+    return { ideas: json.ideas };
   } catch (err) {
     console.warn('[Polaris] dashboard-data-structure.json no disponible, usando datos de ejemplo.', err);
-    return {
-      herramientas: HERRAMIENTAS_DATA,
-      ideas:        IDEAS_DATA,
-    };
+    return { ideas: IDEAS_DATA };
   }
 }
 
@@ -478,9 +506,14 @@ async function fetchStocks() {
 // ===== REFRESH SCHEDULERS =====
 function scheduleContentRefresh() {
   setInterval(async () => {
-    const [noticia, data] = await Promise.all([fetchTopNoticia(), fetchContent()]);
+    // Noticias y herramientas se refrescan por separado — contratos distintos
+    const [noticia, herramientas, data] = await Promise.all([
+      fetchTopNoticia(),
+      fetchHerramientas(),
+      fetchContent(),
+    ]);
     renderTopNoticias(noticia);
-    renderHerramientas(data.herramientas);
+    renderHerramientas(herramientas);
     renderIdeas(data.ideas);
   }, REFRESH_CONTENT_MS);
 }
@@ -502,11 +535,17 @@ function scheduleStockRefresh() {
 
 // ===== INIT =====
 (async function init() {
-  // Content
+  // Noticias — ruta exclusiva: data/top-news.json → data.item / data.items
   renderNoticiasSkeleton();
-  const [noticia, data] = await Promise.all([fetchTopNoticia(), fetchContent()]);
+
+  // Herramientas y noticias se cargan en paralelo pero por rutas separadas
+  const [noticia, herramientas, data] = await Promise.all([
+    fetchTopNoticia(),
+    fetchHerramientas(),
+    fetchContent(),
+  ]);
   renderTopNoticias(noticia);
-  renderHerramientas(data.herramientas);
+  renderHerramientas(herramientas);
   renderIdeas(data.ideas);
 
   // Trending (right panel)
