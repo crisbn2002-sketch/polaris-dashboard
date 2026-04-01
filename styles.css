@@ -446,6 +446,40 @@ body {
 .card--prompt:hover { border-color: rgba(168, 85, 247, 0.35); }
 .card--idea:hover   { border-color: rgba(234, 179, 8, 0.35); }
 
+/* ===== HERRAMIENTAS CAROUSEL ===== */
+.tools-carousel {
+  position: relative;
+}
+
+.tools-carousel__track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.tools-carousel__track::-webkit-scrollbar {
+  height: 4px;
+}
+.tools-carousel__track::-webkit-scrollbar-track {
+  background: transparent;
+}
+.tools-carousel__track::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.tools-carousel__track .card {
+  flex: 0 0 calc(33.333% - 0.667rem);
+  scroll-snap-align: start;
+  min-width: 240px;
+}
+
 /* ===== SKELETON ===== */
 @keyframes skel-pulse {
   0%   { background-position: 200% 0; }
@@ -895,6 +929,7 @@ body {
 @media (max-width: 1100px) {
   .rankings-panel { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-carousel__track .card { flex: 0 0 calc(50% - 0.5rem); }
 }
 
 @media (max-width: 768px) {
@@ -917,6 +952,7 @@ body {
   }
   .footer { padding: 1rem; padding-bottom: 5.5rem; flex-direction: column; gap: 0.4rem; text-align: center; }
   .cards-grid { grid-template-columns: 1fr; }
+  .tools-carousel__track .card { flex: 0 0 82%; }
   .task-tabs { gap: 0.4rem; }
   .task-tab { font-size: 0.75rem; padding: 0.4rem 0.8rem; }
   .navbar__title { font-size: 0.9rem; }
