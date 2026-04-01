@@ -36,6 +36,42 @@
       "difficulty": "Baja",
       "url": "https://www.perplexity.ai",
       "tag_color": "purple"
+    },
+    {
+      "name": "Midjourney",
+      "description": "Generador de imágenes de altísima calidad a partir de texto.",
+      "category": "Generador Imagen",
+      "emoji": "🎨",
+      "rating": 4.8,
+      "users": "+16M",
+      "platform": "Discord, Web",
+      "difficulty": "Media",
+      "url": "https://www.midjourney.com",
+      "tag_color": "indigo"
+    },
+    {
+      "name": "ElevenLabs",
+      "description": "Plataforma líder en generación de voz realista y clonación de voz.",
+      "category": "Audio",
+      "emoji": "🎙️",
+      "rating": 4.9,
+      "users": "+1M",
+      "platform": "Web, API",
+      "difficulty": "Baja",
+      "url": "https://elevenlabs.io",
+      "tag_color": "red"
+    },
+    {
+      "name": "Notion AI",
+      "description": "Asistente integrado en Notion para escribir, resumir y organizar notas.",
+      "category": "Productividad",
+      "emoji": "📝",
+      "rating": 4.6,
+      "users": "+50M",
+      "platform": "Web, Escritorio, Móvil",
+      "difficulty": "Baja",
+      "url": "https://www.notion.so/product/ai",
+      "tag_color": "gray"
     }
   ]
 }
