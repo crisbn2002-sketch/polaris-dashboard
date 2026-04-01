@@ -1,4 +1,41 @@
 {
   "success": true,
-  "items": []
+  "items": [
+    {
+      "name": "ChatGPT",
+      "description": "Asistente conversacional de OpenAI muy versátil y avanzado.",
+      "category": "Chatbot",
+      "emoji": "🤖",
+      "rating": 4.9,
+      "users": "+100M",
+      "platform": "Web, iOS, Android",
+      "difficulty": "Baja",
+      "url": "https://chat.openai.com",
+      "tag_color": "green"
+    },
+    {
+      "name": "Claude",
+      "description": "Asistente enfocado en precisión, seguridad y ventanas de contexto amplias.",
+      "category": "Chatbot",
+      "emoji": "🧠",
+      "rating": 4.8,
+      "users": "+10M",
+      "platform": "Web, iOS, Android",
+      "difficulty": "Baja",
+      "url": "https://claude.ai",
+      "tag_color": "blue"
+    },
+    {
+      "name": "Perplexity",
+      "description": "Motor de búsqueda impulsado por IA con respuestas citadas en tiempo real.",
+      "category": "Buscador",
+      "emoji": "🔎",
+      "rating": 4.7,
+      "users": "+10M",
+      "platform": "Web, Extensiones, Móvil",
+      "difficulty": "Baja",
+      "url": "https://www.perplexity.ai",
+      "tag_color": "purple"
+    }
+  ]
 }
