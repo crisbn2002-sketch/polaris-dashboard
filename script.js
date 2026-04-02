@@ -362,22 +362,32 @@ function renderTrendingSkills(data) {
 }
 
 // ===== RENDER: IDEAS =====
+// Contrato: data/ideas.json → { success, items: [{ title, summary, platform, category, tag_color, tags, cta_label }] }
 function renderIdeas(data) {
   const grid = document.getElementById('ideasGrid');
   if (!grid) return;
+
+  if (!data || data.length === 0) {
+    grid.innerHTML = `
+      <article class="card card--idea">
+        <p class="card__desc" style="text-align:center;padding:1rem 0;color:var(--text-muted);">No hay ideas disponibles.</p>
+      </article>`;
+    return;
+  }
+
   grid.innerHTML = data.map(item => `
     <article class="card card--idea">
       <div class="card__top">
-        <span class="tag tag--${item.tag_color}">${item.category}</span>
+        <span class="tag tag--${item.tag_color || 'blue'}">${item.category}</span>
         <span class="idea__platform">${item.platform}</span>
       </div>
       <h3 class="card__title">${item.title}</h3>
       <p class="card__desc">${item.summary}</p>
       <div class="card__footer">
         <div class="idea__tags">
-          ${item.tags.map(t => `<span class="micro-tag">${t}</span>`).join('')}
+          ${Array.isArray(item.tags) ? item.tags.map(t => `<span class="micro-tag">${t}</span>`).join('') : ''}
         </div>
-        <button class="btn btn--ghost btn--sm">Usar idea</button>
+        <button class="btn btn--ghost btn--sm">${item.cta_label || 'Usar idea'}</button>
       </div>
     </article>
   `).join('');
@@ -449,16 +459,17 @@ async function fetchHerramientas() {
   }
 }
 
-// ===== FETCH: IDEAS + CONTENIDO GENERAL =====
-async function fetchContent() {
+// ===== FETCH: IDEAS =====
+// Contrato: data/ideas.json → { success, items: [...] }
+async function fetchIdeas() {
   try {
-    const res  = await fetch('data/dashboard-data-structure.json');
+    const res = await fetch('data/ideas.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    return { ideas: json.ideas };
+    return (json.success && Array.isArray(json.items)) ? json.items : IDEAS_DATA;
   } catch (err) {
-    console.warn('[Polaris] dashboard-data-structure.json no disponible, usando datos de ejemplo.', err);
-    return { ideas: IDEAS_DATA };
+    console.warn('[Polaris] data/ideas.json no disponible, usando datos de ejemplo.', err);
+    return IDEAS_DATA;
   }
 }
 
@@ -506,15 +517,14 @@ async function fetchStocks() {
 // ===== REFRESH SCHEDULERS =====
 function scheduleContentRefresh() {
   setInterval(async () => {
-    // Noticias y herramientas se refrescan por separado — contratos distintos
-    const [noticia, herramientas, data] = await Promise.all([
+    const [noticia, herramientas, ideas] = await Promise.all([
       fetchTopNoticia(),
       fetchHerramientas(),
-      fetchContent(),
+      fetchIdeas(),
     ]);
     renderTopNoticias(noticia);
     renderHerramientas(herramientas);
-    renderIdeas(data.ideas);
+    renderIdeas(ideas);
   }, REFRESH_CONTENT_MS);
 }
 
@@ -538,15 +548,14 @@ function scheduleStockRefresh() {
   // Noticias — ruta exclusiva: data/top-news.json → data.item / data.items
   renderNoticiasSkeleton();
 
-  // Herramientas y noticias se cargan en paralelo pero por rutas separadas
-  const [noticia, herramientas, data] = await Promise.all([
+  const [noticia, herramientas, ideas] = await Promise.all([
     fetchTopNoticia(),
     fetchHerramientas(),
-    fetchContent(),
+    fetchIdeas(),
   ]);
   renderTopNoticias(noticia);
   renderHerramientas(herramientas);
-  renderIdeas(data.ideas);
+  renderIdeas(ideas);
 
   // Trending (right panel)
   const [prompts, skills] = await Promise.all([fetchTrendingPrompts(), fetchTrendingSkills()]);
