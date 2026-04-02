@@ -2,14 +2,46 @@
   "success": true,
   "items": [
     {
-      "title": "Hilo viral de LinkedIn en 5 puntos",
-      "description": "Estructura probada para generar más engagement en publicaciones sobre IA y tecnología.",
-      "platform": "LinkedIn",
+      "id": 1,
+      "title": "Impulsar la eficiencia en el marketing AI",
+      "summary": "Explora cómo las herramientas de IA, como ChatGPT y Claude, pueden optimizar tu estrategia de marketing digital al personalizar contenido y segmentar audiencias de manera más efectiva.",
+      "platform": "Web, iOS, Android",
       "category": "Marketing",
-      "format": "Thread",
-      "tags": ["IA", "Contenido", "Engagement"],
+      "tags": [
+        "IA",
+        "Marketing Digital",
+        "Estrategia"
+      ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-03-28T12:00:00Z"
+      "updated_at": "2026-04-02T23:21:28.792Z"
+    },
+    {
+      "id": 2,
+      "title": "Reseña de herramientas de IA de 2026",
+      "summary": "Crea una reseña comparativa de diferentes herramientas de IA lanzadas recientemente, como Cognichip y su impacto en el desarrollo de chips, resaltando sus características y beneficios.",
+      "platform": "Web, Móvil",
+      "category": "Reseñas",
+      "tags": [
+        "IA",
+        "Reseñas",
+        "Tecnología"
+      ],
+      "cta_label": "Usar prompt",
+      "updated_at": "2026-04-02T23:21:28.792Z"
+    },
+    {
+      "id": 3,
+      "title": "El futuro del diseño de chips con IA",
+      "summary": "Desarrolla un artículo sobre cómo Cognichip está revolucionando el diseño de chips con IA, enfatizando la reducción de costos y tiempo en comparación con métodos tradicionales.",
+      "platform": "Web, Blog",
+      "category": "Contenido",
+      "tags": [
+        "IA",
+        "Tecnología",
+        "Inovación"
+      ],
+      "cta_label": "Usar prompt",
+      "updated_at": "2026-04-02T23:21:28.792Z"
     }
   ]
 }
