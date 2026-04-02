@@ -3,51 +3,51 @@
   "items": [
     {
       "id": 1,
-      "title": "Qué revela el caso Mercor sobre el riesgo real en startups de IA",
-      "summary": "Analiza cómo un incidente de ciberseguridad puede afectar la confianza en una startup de IA, especialmente cuando el punto de entrada está vinculado a un proyecto open source. Ideal para explicar por qué seguridad y producto ya no pueden ir por separado.",
+      "title": "¿Qué revela el tropiezo de Anthropic sobre la gestión de crisis en IA?",
+      "summary": "Un análisis sobre cómo un retiro masivo de repositorios de GitHub por una supuesta fuga de código puede afectar la percepción pública de una empresa de IA y qué aprendizajes deja sobre comunicación, control interno y reacción ante incidentes.",
       "platform": "LinkedIn",
       "category": "Análisis",
       "tag_color": "blue",
       "tags": [
-        "ciberseguridad",
-        "startup de IA",
-        "open source"
+        "Anthropic",
+        "gestión de crisis",
+        "seguridad en IA"
       ],
       "cta_label": "Usar idea",
       "source_reference": "top-news.json",
-      "updated_at": "2026-04-02T02:44:48.768Z"
+      "updated_at": "2026-04-02T18:50:19.875Z"
     },
     {
       "id": 2,
-      "title": "Anthropic vs. Mercor: dos noticias, dos lecciones distintas para la industria IA",
-      "summary": "Compara el impacto reputacional y operativo de un error interno en una empresa de IA como Anthropic con un ciberataque sufrido por Mercor. La idea sirve para mostrar cómo cambian los riesgos según el tipo de incidente.",
+      "title": "Meta vs. Cognichip: dos formas de sostener la revolución de la IA",
+      "summary": "Una comparativa entre invertir en infraestructura energética para escalar centros de datos de IA y apostar por IA para diseñar chips más eficientes. Ideal para mostrar dos caminos distintos para hacer crecer la industria.",
       "platform": "X",
       "category": "Comparativa",
       "tag_color": "blue",
       "tags": [
-        "Anthropic",
-        "Mercor",
-        "riesgos en IA"
+        "Meta",
+        "Cognichip",
+        "infraestructura de IA"
       ],
       "cta_label": "Usar idea",
       "source_reference": "top-news.json",
-      "updated_at": "2026-04-02T02:44:48.768Z"
+      "updated_at": "2026-04-02T18:50:19.875Z"
     },
     {
       "id": 3,
-      "title": "Cómo comunicar una crisis de seguridad en una startup de IA sin perder credibilidad",
-      "summary": "Crea un tutorial paso a paso inspirado en el caso Mercor: qué decir primero, cómo reconocer el incidente y cómo mantener la confianza de la audiencia. Enfócalo como una guía práctica para founders y equipos de comunicación.",
+      "title": "Cómo explicar en un post el impacto de la IA en chips sin complicarte",
+      "summary": "Un tutorial para creadores sobre cómo convertir la noticia de Cognichip en contenido simple: define el problema, explica por qué diseñar chips cuesta tiempo y dinero, y remata con el dato de que la firma busca reducir costos y tiempos de desarrollo.",
       "platform": "Instagram",
       "category": "Tutorial",
       "tag_color": "blue",
       "tags": [
-        "comunicación de crisis",
-        "seguridad",
-        "fundadores"
+        "Cognichip",
+        "chips",
+        "creación de contenido"
       ],
       "cta_label": "Usar idea",
       "source_reference": "top-news.json",
-      "updated_at": "2026-04-02T02:44:48.768Z"
+      "updated_at": "2026-04-02T18:50:19.875Z"
     }
   ]
 }
