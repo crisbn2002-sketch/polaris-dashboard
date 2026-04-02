@@ -352,6 +352,7 @@ body {
 /* ===== MAIN ===== */
 .main {
   flex: 1;
+  min-width: 0;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
