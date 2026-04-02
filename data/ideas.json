@@ -1,47 +1,53 @@
-[
-  {
-    "id": 1,
-    "title": "Qué revela el caso Mercor sobre los riesgos de depender de proyectos open source en IA",
-    "summary": "Idea de análisis centrada en cómo un incidente de seguridad ligado a LiteLLM puede convertirse en una alerta para startups de IA: revisar dependencias, reforzar controles y comunicar mejor los riesgos al cliente.",
-    "platform": "LinkedIn",
-    "category": "Análisis",
-    "tags": [
-      "ciberseguridad",
-      "IA",
-      "open source"
-    ],
-    "cta_label": "Usar idea",
-    "source_reference": "top-news.json",
-    "updated_at": "2026-04-02T02:30:26.552Z"
-  },
-  {
-    "id": 2,
-    "title": "Anthropic vs. Mercor: dos noticias, dos tipos de crisis en IA",
-    "summary": "Idea comparativa para explicar la diferencia entre una crisis operativa interna y un incidente de ciberseguridad externo. Útil para mostrar cómo distintos fallos impactan la reputación y la confianza en empresas de IA.",
-    "platform": "X",
-    "category": "Comparativa",
-    "tags": [
-      "Anthropic",
-      "Mercor",
-      "comparativa"
-    ],
-    "cta_label": "Usar idea",
-    "source_reference": "top-news.json",
-    "updated_at": "2026-04-02T02:30:26.552Z"
-  },
-  {
-    "id": 3,
-    "title": "Cómo preparar una startup de IA para un incidente de seguridad en 5 pasos",
-    "summary": "Tutorial práctico inspirado en el caso Mercor: revisar dependencias críticas, identificar accesos sensibles, definir protocolo de respuesta, coordinar comunicación y actualizar medidas de prevención.",
-    "platform": "Instagram",
-    "category": "Tutorial",
-    "tags": [
-      "tutorial",
-      "seguridad",
-      "startups"
-    ],
-    "cta_label": "Usar idea",
-    "source_reference": "top-news.json",
-    "updated_at": "2026-04-02T02:30:26.552Z"
-  }
-]
+{
+  "success": true,
+  "items": [
+    {
+      "id": 1,
+      "title": "Qué revela el caso Mercor sobre el riesgo real en startups de IA",
+      "summary": "Analiza cómo un incidente de ciberseguridad puede afectar la confianza en una startup de IA, especialmente cuando el punto de entrada está vinculado a un proyecto open source. Ideal para explicar por qué seguridad y producto ya no pueden ir por separado.",
+      "platform": "LinkedIn",
+      "category": "Análisis",
+      "tag_color": "blue",
+      "tags": [
+        "ciberseguridad",
+        "startup de IA",
+        "open source"
+      ],
+      "cta_label": "Usar idea",
+      "source_reference": "top-news.json",
+      "updated_at": "2026-04-02T02:44:48.768Z"
+    },
+    {
+      "id": 2,
+      "title": "Anthropic vs. Mercor: dos noticias, dos lecciones distintas para la industria IA",
+      "summary": "Compara el impacto reputacional y operativo de un error interno en una empresa de IA como Anthropic con un ciberataque sufrido por Mercor. La idea sirve para mostrar cómo cambian los riesgos según el tipo de incidente.",
+      "platform": "X",
+      "category": "Comparativa",
+      "tag_color": "blue",
+      "tags": [
+        "Anthropic",
+        "Mercor",
+        "riesgos en IA"
+      ],
+      "cta_label": "Usar idea",
+      "source_reference": "top-news.json",
+      "updated_at": "2026-04-02T02:44:48.768Z"
+    },
+    {
+      "id": 3,
+      "title": "Cómo comunicar una crisis de seguridad en una startup de IA sin perder credibilidad",
+      "summary": "Crea un tutorial paso a paso inspirado en el caso Mercor: qué decir primero, cómo reconocer el incidente y cómo mantener la confianza de la audiencia. Enfócalo como una guía práctica para founders y equipos de comunicación.",
+      "platform": "Instagram",
+      "category": "Tutorial",
+      "tag_color": "blue",
+      "tags": [
+        "comunicación de crisis",
+        "seguridad",
+        "fundadores"
+      ],
+      "cta_label": "Usar idea",
+      "source_reference": "top-news.json",
+      "updated_at": "2026-04-02T02:44:48.768Z"
+    }
+  ]
+}
