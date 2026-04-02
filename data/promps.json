@@ -1,1 +1,15 @@
-[]
+{
+  "success": true,
+  "items": [
+    {
+      "title": "Hilo viral de LinkedIn en 5 puntos",
+      "description": "Estructura probada para generar más engagement en publicaciones sobre IA y tecnología.",
+      "platform": "LinkedIn",
+      "category": "Marketing",
+      "format": "Thread",
+      "tags": ["IA", "Contenido", "Engagement"],
+      "cta_label": "Usar prompt",
+      "updated_at": "2026-03-28T12:00:00Z"
+    }
+  ]
+}
