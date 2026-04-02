@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "OpenAI mató Sora: lo que nadie te está contando",
+    "summary": "Análisis del cierre de Sora con los números reales de costos e ingresos y lo que revela sobre el verdadero futuro de OpenAI en robótica.",
+    "platform": "LinkedIn",
+    "category": "Análisis",
+    "tags": ["OpenAI", "Sora", "Estrategia"],
+    "cta_label": "Usar idea",
+    "source_reference": "top-news.json",
+    "updated_at": "2026-03-28T12:00:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Gemini 3 gratis vs ChatGPT de pago: la comparativa honesta",
+    "summary": "Carrusel comparativo con casos de uso reales para mostrar cuándo conviene usar Gemini gratis y cuándo sí vale la pena pagar por ChatGPT Plus.",
+    "platform": "Instagram",
+    "category": "Comparativa",
+    "tags": ["Gemini", "ChatGPT", "Comparativa"],
+    "cta_label": "Usar idea",
+    "source_reference": "top-news.json",
+    "updated_at": "2026-03-28T12:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Cómo hago en 10 minutos lo que antes tardaba 3 horas con IA",
+    "summary": "Idea de tutorial corto mostrando un flujo práctico con herramientas IA para automatizar una tarea real y generar un antes/después con alto engagement.",
+    "platform": "TikTok",
+    "category": "Tutorial",
+    "tags": ["Productividad", "Tutorial", "Viral"],
+    "cta_label": "Usar idea",
+    "source_reference": "top-news.json",
+    "updated_at": "2026-03-28T12:00:00Z"
+  }
+]
