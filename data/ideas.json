@@ -1,53 +1,47 @@
-{
-  "success": true,
-  "items": [
-    {
-      "id": 1,
-      "title": "¿Qué revela el tropiezo de Anthropic sobre la gestión de crisis en IA?",
-      "summary": "Un análisis sobre cómo un retiro masivo de repositorios de GitHub por una supuesta fuga de código puede afectar la percepción pública de una empresa de IA y qué aprendizajes deja sobre comunicación, control interno y reacción ante incidentes.",
-      "platform": "LinkedIn",
-      "category": "Análisis",
-      "tag_color": "blue",
-      "tags": [
-        "Anthropic",
-        "gestión de crisis",
-        "seguridad en IA"
-      ],
-      "cta_label": "Usar idea",
-      "source_reference": "top-news.json",
-      "updated_at": "2026-04-02T18:50:19.875Z"
-    },
-    {
-      "id": 2,
-      "title": "Meta vs. Cognichip: dos formas de sostener la revolución de la IA",
-      "summary": "Una comparativa entre invertir en infraestructura energética para escalar centros de datos de IA y apostar por IA para diseñar chips más eficientes. Ideal para mostrar dos caminos distintos para hacer crecer la industria.",
-      "platform": "X",
-      "category": "Comparativa",
-      "tag_color": "blue",
-      "tags": [
-        "Meta",
-        "Cognichip",
-        "infraestructura de IA"
-      ],
-      "cta_label": "Usar idea",
-      "source_reference": "top-news.json",
-      "updated_at": "2026-04-02T18:50:19.875Z"
-    },
-    {
-      "id": 3,
-      "title": "Cómo explicar en un post el impacto de la IA en chips sin complicarte",
-      "summary": "Un tutorial para creadores sobre cómo convertir la noticia de Cognichip en contenido simple: define el problema, explica por qué diseñar chips cuesta tiempo y dinero, y remata con el dato de que la firma busca reducir costos y tiempos de desarrollo.",
-      "platform": "Instagram",
-      "category": "Tutorial",
-      "tag_color": "blue",
-      "tags": [
-        "Cognichip",
-        "chips",
-        "creación de contenido"
-      ],
-      "cta_label": "Usar idea",
-      "source_reference": "top-news.json",
-      "updated_at": "2026-04-02T18:50:19.875Z"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "title": "¿Qué revela el accidente de Anthropic sobre el control del código en IA?",
+    "summary": "Analiza cómo un intento de retirar miles de repositorios de GitHub terminó siendo un error, y qué dice eso sobre la gestión de crisis, la reputación y el control del código en empresas de IA.",
+    "platform": "LinkedIn",
+    "category": "Análisis",
+    "tags": [
+      "Anthropic",
+      "GitHub",
+      "ciberseguridad"
+    ],
+    "cta_label": "Usar idea",
+    "source_reference": "top-news.json",
+    "updated_at": "2026-04-02T22:00:42.950Z"
+  },
+  {
+    "id": 2,
+    "title": "Meta vs. Cognichip: dos apuestas distintas para escalar la IA",
+    "summary": "Compara dos enfoques clave del boom de IA: la infraestructura energética masiva de Meta para alimentar centros de datos y la propuesta de Cognichip de usar IA para diseñar chips más rápido y barato.",
+    "platform": "X",
+    "category": "Comparativa",
+    "tags": [
+      "Meta",
+      "Cognichip",
+      "chips"
+    ],
+    "cta_label": "Usar idea",
+    "source_reference": "top-news.json",
+    "updated_at": "2026-04-02T22:00:42.950Z"
+  },
+  {
+    "id": 3,
+    "title": "Cómo convertir una noticia de IA en un hilo o carrusel con ángulo claro",
+    "summary": "Tutorial para creadores: elige una noticia, detecta el conflicto principal, extrae un dato fuerte del resumen y construye una pieza breve usando el caso de Cognichip como ejemplo.",
+    "platform": "Instagram",
+    "category": "Tutorial",
+    "tags": [
+      "creadores",
+      "contenido",
+      "IA"
+    ],
+    "cta_label": "Usar idea",
+    "source_reference": "top-news.json",
+    "updated_at": "2026-04-02T22:00:42.950Z"
+  }
+]
