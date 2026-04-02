@@ -347,7 +347,7 @@ function renderTrendingPrompts(data) {
         ${copyBtn}
       </div>
       <h3 class="trend-card__title">${item.title}</h3>
-      <p class="trend-card__desc">${item.description || item.desc || ''}</p>
+      <p class="trend-card__desc">${item.summary || item.description || item.desc || ''}</p>
       <div class="trend-card__meta">
         <span class="trend-card__uso">${usoText}</span>
         <span class="copy-feedback" id="tcopy${i}"></span>
