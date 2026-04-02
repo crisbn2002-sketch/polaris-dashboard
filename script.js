@@ -323,23 +323,37 @@ function renderHerramientas(data) {
 }
 
 // ===== RENDER: TRENDING PROMPTS =====
+// Contrato: data/prompts.json → { success, items: [{ title, description, platform, format, category, tag_color, full_prompt, cta_label }] }
 function renderTrendingPrompts(data) {
   const container = document.getElementById('trendingPromptsGrid');
   if (!container) return;
-  container.innerHTML = data.map((item, i) => `
+
+  if (!data || data.length === 0) {
+    container.innerHTML = `<p style="color:var(--text-muted);font-size:0.82rem;">No hay prompts disponibles.</p>`;
+    return;
+  }
+
+  container.innerHTML = data.map((item, i) => {
+    const copyText  = (item.full_prompt || '').replace(/"/g, '&quot;');
+    const usoText   = item.platform || item.format || item.uso || '';
+    const colorTag  = item.tag_color || 'purple';
+    const copyBtn   = copyText
+      ? `<button class="btn--copy" title="Copiar prompt" data-copy="${copyText}">📋</button>`
+      : '';
+    return `
     <article class="trend-card trend-card--prompt">
       <div class="trend-card__top">
-        <span class="tag tag--${item.tag_color}">${item.category}</span>
-        <button class="btn--copy" title="Copiar prompt" data-copy="${item.full_prompt.replace(/"/g, '&quot;')}">📋</button>
+        <span class="tag tag--${colorTag}">${item.category}</span>
+        ${copyBtn}
       </div>
       <h3 class="trend-card__title">${item.title}</h3>
-      <p class="trend-card__desc">${item.desc}</p>
+      <p class="trend-card__desc">${item.description || item.desc || ''}</p>
       <div class="trend-card__meta">
-        <span class="trend-card__uso">${item.uso}</span>
+        <span class="trend-card__uso">${usoText}</span>
         <span class="copy-feedback" id="tcopy${i}"></span>
       </div>
-    </article>
-  `).join('');
+    </article>`;
+  }).join('');
 }
 
 // ===== RENDER: TRENDING SKILLS =====
@@ -473,20 +487,14 @@ async function fetchIdeas() {
   }
 }
 
-// ===== FETCH: TRENDING =====
+// ===== FETCH: TRENDING PROMPTS =====
+// Contrato: data/prompts.json → { success, items: [...] }
 async function fetchTrendingPrompts() {
   try {
-    const res  = await fetch('data/dashboard-data-structure.json');
+    const res = await fetch('data/prompts.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    return json.prompts.map(p => ({
-      title:       p.title,
-      desc:        p.summary,
-      uso:         p.format,
-      category:    p.category,
-      tag_color:   p.tag_color,
-      full_prompt: p.full_prompt,
-    }));
+    return (json.success && Array.isArray(json.items)) ? json.items : trendingPrompts;
   } catch {
     return trendingPrompts;
   }
