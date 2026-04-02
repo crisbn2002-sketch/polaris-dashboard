@@ -4,29 +4,29 @@
     {
       "badge": "AI",
       "date": "01-04-2026",
-      "hook": "⚡ Less than a month: StrictlyVC San Francisco brings leaders from TDK Ventures, Replit, and more together",
-      "title": "Less than a month: StrictlyVC San Francisco brings leaders from TDK Ventures, Replit, and more together",
-      "summary": "StrictlyVC San Francisco brings leaders from TDK Ventures, Replit, and more together on April 30. Space is limited. Register here for your pass.",
+      "hook": "⚡ Anthropic took down thousands of GitHub repos trying to yank its leaked source code — a move the company says was an accident",
+      "title": "Anthropic took down thousands of GitHub repos trying to yank its leaked source code — a move the company says was an accident",
+      "summary": "Anthropic executives said it was an accident and retracted the bulk of the takedown notices.",
       "footer_label": "AI",
-      "source_url": "https://techcrunch.com/2026/04/01/join-the-first-strictlyvc-of-2026-in-sf-with-leaders-from-tdk-ventures-and-replits-co-founder/"
+      "source_url": "https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/"
     },
     {
       "badge": "AI",
       "date": "01-04-2026",
-      "hook": "⚡ Mercor says it was hit by cyberattack tied to compromise of open-source LiteLLM project",
-      "title": "Mercor says it was hit by cyberattack tied to compromise of open-source LiteLLM project",
-      "summary": "The AI recruiting startup confirmed a security incident after an extortion hacking crew took credit for stealing data from the company's systems.",
+      "hook": "⚡ Meta’s natural gas binge could power South Dakota",
+      "title": "Meta’s natural gas binge could power South Dakota",
+      "summary": "Meta's upcoming Hyperion AI data center will be powered by 10 new natural gas plants.",
       "footer_label": "AI",
-      "source_url": "https://techcrunch.com/2026/03/31/mercor-says-it-was-hit-by-cyberattack-tied-to-compromise-of-open-source-litellm-project/"
+      "source_url": "https://techcrunch.com/2026/04/01/metas-natural-gas-binge-could-power-south-dakota/"
     },
     {
       "badge": "AI",
-      "date": "31-03-2026",
-      "hook": "⚡ Anthropic is having a month",
-      "title": "Anthropic is having a month",
-      "summary": "A human really borks things at Anthropic for the second time this week.",
+      "date": "01-04-2026",
+      "hook": "⚡ Cognichip wants AI to design the chips that power AI, and just raised $60M to try",
+      "title": "Cognichip wants AI to design the chips that power AI, and just raised $60M to try",
+      "summary": "The firm says it can reduce the cost of chip development by more than 75% and cut the timeline by more than half.",
       "footer_label": "AI",
-      "source_url": "https://techcrunch.com/2026/03/31/anthropic-is-having-a-month/"
+      "source_url": "https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/"
     }
   ]
 }
