@@ -1,35 +1,47 @@
 [
   {
     "id": 1,
-    "title": "OpenAI mató Sora: lo que nadie te está contando",
-    "summary": "Análisis del cierre de Sora con los números reales de costos e ingresos y lo que revela sobre el verdadero futuro de OpenAI en robótica.",
+    "title": "Qué nos dice el caso Mercor sobre el riesgo en la cadena de herramientas de IA",
+    "summary": "Analiza cómo una startup de IA puede verse afectada por un incidente ligado a un proyecto open source comprometido, y qué revela esto sobre la dependencia de herramientas externas en productos de IA.",
     "platform": "LinkedIn",
     "category": "Análisis",
-    "tags": ["OpenAI", "Sora", "Estrategia"],
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "open source"
+    ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-03-28T12:00:00Z"
+    "updated_at": "2026-04-02T02:14:53.709Z"
   },
   {
     "id": 2,
-    "title": "Gemini 3 gratis vs ChatGPT de pago: la comparativa honesta",
-    "summary": "Carrusel comparativo con casos de uso reales para mostrar cuándo conviene usar Gemini gratis y cuándo sí vale la pena pagar por ChatGPT Plus.",
-    "platform": "Instagram",
+    "title": "Anthropic vs. Mercor: dos formas distintas de enfrentar un mal mes en IA",
+    "summary": "Compara los dos titulares recientes para mostrar la diferencia entre un problema operativo interno y un incidente de seguridad vinculado a terceros, y qué lección deja cada caso para equipos de IA.",
+    "platform": "X",
     "category": "Comparativa",
-    "tags": ["Gemini", "ChatGPT", "Comparativa"],
+    "tags": [
+      "Anthropic",
+      "Mercor",
+      "seguridad"
+    ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-03-28T12:00:00Z"
+    "updated_at": "2026-04-02T02:14:53.709Z"
   },
   {
     "id": 3,
-    "title": "Cómo hago en 10 minutos lo que antes tardaba 3 horas con IA",
-    "summary": "Idea de tutorial corto mostrando un flujo práctico con herramientas IA para automatizar una tarea real y generar un antes/después con alto engagement.",
-    "platform": "TikTok",
+    "title": "Cómo crear un hilo o post sobre seguridad en IA sin caer en alarmismo",
+    "summary": "Usa la noticia de Mercor como base para explicar, paso a paso, cómo convertir un incidente de ciberseguridad en una pieza educativa: contexto, impacto, lección y cierre práctico.",
+    "platform": "Instagram",
     "category": "Tutorial",
-    "tags": ["Productividad", "Tutorial", "Viral"],
+    "tags": [
+      "tutorial",
+      "contenido",
+      "ciberseguridad"
+    ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-03-28T12:00:00Z"
+    "updated_at": "2026-04-02T02:14:53.709Z"
   }
 ]
