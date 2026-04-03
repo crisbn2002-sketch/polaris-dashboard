@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "title": "¿Qué revela el accidente de Anthropic sobre el control del código en IA?",
-    "summary": "Analiza cómo un intento de retirar miles de repositorios de GitHub terminó siendo un error, y qué dice eso sobre la gestión de crisis, la reputación y el control del código en empresas de IA.",
+    "title": "Qué busca OpenAI al comprar TBPN y por qué importa para el ecosistema tech",
+    "summary": "Idea de análisis sobre la adquisición de TBPN por parte de OpenAI: cómo esta jugada puede influir en la narrativa de marca, la conversación sobre IA y la relación entre medios, founders y grandes laboratorios.",
     "platform": "LinkedIn",
     "category": "Análisis",
     "tags": [
-      "Anthropic",
-      "GitHub",
-      "ciberseguridad"
+      "OpenAI",
+      "TBPN",
+      "ecosistema tech"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-02T22:00:42.950Z"
+    "updated_at": "2026-04-03T22:00:42.630Z"
   },
   {
     "id": 2,
-    "title": "Meta vs. Cognichip: dos apuestas distintas para escalar la IA",
-    "summary": "Compara dos enfoques clave del boom de IA: la infraestructura energética masiva de Meta para alimentar centros de datos y la propuesta de Cognichip de usar IA para diseñar chips más rápido y barato.",
+    "title": "Microsoft vs Google en IA aplicada: modelos fundacionales frente a creación de video con avatares",
+    "summary": "Idea comparativa entre el enfoque de Microsoft, que presenta tres nuevos modelos fundacionales, y el de Google, que potencia la creación de video en Vids con avatares guiados por prompts. Ideal para mostrar dos apuestas distintas dentro de la IA.",
     "platform": "X",
     "category": "Comparativa",
     "tags": [
-      "Meta",
-      "Cognichip",
-      "chips"
+      "Microsoft",
+      "Google",
+      "modelos de IA"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-02T22:00:42.950Z"
+    "updated_at": "2026-04-03T22:00:42.630Z"
   },
   {
     "id": 3,
-    "title": "Cómo convertir una noticia de IA en un hilo o carrusel con ángulo claro",
-    "summary": "Tutorial para creadores: elige una noticia, detecta el conflicto principal, extrae un dato fuerte del resumen y construye una pieza breve usando el caso de Cognichip como ejemplo.",
-    "platform": "Instagram",
+    "title": "Cómo probar avatares dirigidos por prompts en Google Vids para crear videos más rápido",
+    "summary": "Tutorial práctico para explicar cómo usar la nueva función de Google Vids que permite personalizar e নির্দেশionar avatares con prompts, pensado para creadores que quieren agilizar su flujo de video.",
+    "platform": "Instagram Reels",
     "category": "Tutorial",
     "tags": [
-      "creadores",
-      "contenido",
-      "IA"
+      "Google Vids",
+      "avatares",
+      "creación de video"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-02T22:00:42.950Z"
+    "updated_at": "2026-04-03T22:00:42.630Z"
   }
 ]
