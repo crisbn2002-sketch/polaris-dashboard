@@ -3,6 +3,25 @@
 const REFRESH_CONTENT_MS = 24 * 60 * 60 * 1000; // 24 hours
 const REFRESH_STOCKS_MS  = 15 * 60 * 1000;        // 15 minutes
 
+// ===== THEME TOGGLE =====
+(function initTheme() {
+  const root      = document.documentElement;
+  const btn       = document.getElementById('themeToggle');
+  const saved     = localStorage.getItem('polaris-theme');
+  const isLight   = saved === 'light';
+
+  if (isLight) root.classList.add('light');
+  if (btn) btn.textContent = isLight ? '☀️' : '🌙';
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const nowLight = root.classList.toggle('light');
+      localStorage.setItem('polaris-theme', nowLight ? 'light' : 'dark');
+      btn.textContent = nowLight ? '☀️' : '🌙';
+    });
+  }
+})();
+
 // ===== DATE =====
 const dateEl = document.getElementById('currentDate');
 if (dateEl) {
