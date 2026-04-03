@@ -3,45 +3,45 @@
   "items": [
     {
       "id": 1,
-      "title": "Impulsar la eficiencia en el marketing AI",
-      "summary": "Explora cómo las herramientas de IA, como ChatGPT y Claude, pueden optimizar tu estrategia de marketing digital al personalizar contenido y segmentar audiencias de manera más efectiva.",
+      "title": "Promocionar el nuevo Podcast de OpenAI",
+      "summary": "Desarrolla una campaña de marketing centrada en la reciente adquisición de TBPN por parte de OpenAI. Considera cómo puedes aprovechar este podcast para atraer a una nueva audiencia interesada en la inteligencia artificial y el emprendimiento.",
       "platform": "Web, iOS, Android",
       "category": "Marketing",
       "tags": [
-        "IA",
-        "Marketing Digital",
-        "Estrategia"
+        "OpenAI",
+        "Marketing",
+        "Podcast"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-02T23:32:51.307Z"
+      "updated_at": "2026-04-03T22:00:17.717Z"
     },
     {
       "id": 2,
-      "title": "Reseña de herramientas de IA de 2026",
-      "summary": "Crea una reseña comparativa de diferentes herramientas de IA lanzadas recientemente, como Cognichip y su impacto en el desarrollo de chips, resaltando sus características y beneficios.",
-      "platform": "Web, Móvil",
+      "title": "Reseña de los nuevos modelos de IA de Microsoft",
+      "summary": "Crea una reseña exhaustiva sobre los tres nuevos modelos de IA lanzados por Microsoft. Analiza sus características, ventajas y cómo se comparan con otros competidores en el mercado.",
+      "platform": "Web, iOS, Android",
       "category": "Reseñas",
       "tags": [
+        "Microsoft",
         "IA",
-        "Reseñas",
-        "Tecnología"
+        "Reseña"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-02T23:32:51.307Z"
+      "updated_at": "2026-04-03T22:00:17.717Z"
     },
     {
       "id": 3,
-      "title": "El futuro del diseño de chips con IA",
-      "summary": "Desarrolla un artículo sobre cómo Cognichip está revolucionando el diseño de chips con IA, enfatizando la reducción de costos y tiempo en comparación con métodos tradicionales.",
-      "platform": "Web, Blog",
+      "title": "Guía sobre el uso de avatares en Google Vids",
+      "summary": "Genera contenido educativo que explique cómo los creadores pueden utilizar los nuevos avatares en Google Vids para mejorar su proceso de creación de video a través de prompts personalizados.",
+      "platform": "Web, iOS, Android",
       "category": "Contenido",
       "tags": [
-        "IA",
-        "Tecnología",
-        "Inovación"
+        "Google",
+        "Vids",
+        "Contenido"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-02T23:32:51.307Z"
+      "updated_at": "2026-04-03T22:00:17.717Z"
     }
   ]
 }
