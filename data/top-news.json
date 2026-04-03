@@ -3,6 +3,15 @@
   "items": [
     {
       "badge": "AI",
+      "date": "03-04-2026",
+      "hook": "⚡ The Facebook insider building content moderation for the AI era",
+      "title": "The Facebook insider building content moderation for the AI era",
+      "summary": "Moonbounce has raised $12 million to grow its AI control engine that converts content moderation policies into consistent, predictable AI behavior.",
+      "footer_label": "AI",
+      "source_url": "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/"
+    },
+    {
+      "badge": "AI",
       "date": "02-04-2026",
       "hook": "⚡ OpenAI acquires TBPN, the buzzy founder-led business talk show",
       "title": "OpenAI acquires TBPN, the buzzy founder-led business talk show",
@@ -18,15 +27,6 @@
       "summary": "MAI released models that can transcribe voice into text as well as generate audio and images after the group's formation six months ago.",
       "footer_label": "AI",
       "source_url": "https://techcrunch.com/2026/04/02/microsoft-takes-on-ai-rivals-with-three-new-foundational-models/"
-    },
-    {
-      "badge": "AI",
-      "date": "02-04-2026",
-      "hook": "⚡ Google now lets you direct avatars through prompts in its Vids app",
-      "title": "Google now lets you direct avatars through prompts in its Vids app",
-      "summary": "Google is adding a way to customize and instruct avatars for video creation in the Vids app.",
-      "footer_label": "AI",
-      "source_url": "https://techcrunch.com/2026/04/02/google-now-lets-you-direct-avatars-through-prompts-in-its-vids-app/"
     }
   ]
 }
