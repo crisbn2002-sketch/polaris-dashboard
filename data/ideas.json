@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "title": "Qué busca OpenAI al comprar TBPN y por qué importa para el ecosistema tech",
-    "summary": "Idea de análisis sobre la adquisición de TBPN por parte de OpenAI: cómo esta jugada puede influir en la narrativa de marca, la conversación sobre IA y la relación entre medios, founders y grandes laboratorios.",
+    "title": "Anthropic está ganando tracción privada: qué revela sobre el mercado de IA",
+    "summary": "Idea de análisis sobre por qué Anthropic se está volviendo la operación más caliente en el mercado secundario, cómo OpenAI estaría perdiendo terreno en ese frente y por qué una posible IPO de SpaceX podría cambiar el apetito de los inversores privados.",
     "platform": "LinkedIn",
     "category": "Análisis",
     "tags": [
-      "OpenAI",
-      "TBPN",
-      "ecosistema tech"
+      "Anthropic",
+      "mercado privado",
+      "IA"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-03T22:00:42.630Z"
+    "updated_at": "2026-04-04T22:00:43.038Z"
   },
   {
     "id": 2,
-    "title": "Microsoft vs Google en IA aplicada: modelos fundacionales frente a creación de video con avatares",
-    "summary": "Idea comparativa entre el enfoque de Microsoft, que presenta tres nuevos modelos fundacionales, y el de Google, que potencia la creación de video en Vids con avatares guiados por prompts. Ideal para mostrar dos apuestas distintas dentro de la IA.",
+    "title": "Anthropic vs OpenAI: dos movimientos distintos que muestran estrategias de expansión",
+    "summary": "Comparativa entre el momento de Anthropic en mercados privados y la reestructuración ejecutiva de OpenAI. Una pieza para contrastar crecimiento financiero y reorganización interna, y explicar cómo cada empresa está reforzando su posición desde ángulos muy distintos.",
     "platform": "X",
     "category": "Comparativa",
     "tags": [
-      "Microsoft",
-      "Google",
-      "modelos de IA"
+      "OpenAI",
+      "Anthropic",
+      "estrategia"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-03T22:00:42.630Z"
+    "updated_at": "2026-04-04T22:00:43.038Z"
   },
   {
     "id": 3,
-    "title": "Cómo probar avatares dirigidos por prompts en Google Vids para crear videos más rápido",
-    "summary": "Tutorial práctico para explicar cómo usar la nueva función de Google Vids que permite personalizar e নির্দেশionar avatares con prompts, pensado para creadores que quieren agilizar su flujo de video.",
-    "platform": "Instagram Reels",
+    "title": "Cómo transformar una noticia de IA en un post de alto engagement",
+    "summary": "Tutorial práctico para creadores: toma una noticia como la compra de Coefficient Bio por parte de Anthropic, extrae el dato central, añade contexto mínimo y ciérralo con una pregunta para generar conversación sin saturar de tecnicismos.",
+    "platform": "Instagram",
     "category": "Tutorial",
     "tags": [
-      "Google Vids",
-      "avatares",
-      "creación de video"
+      "creación de contenido",
+      "noticias de IA",
+      "engagement"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-03T22:00:42.630Z"
+    "updated_at": "2026-04-04T22:00:43.038Z"
   }
 ]
