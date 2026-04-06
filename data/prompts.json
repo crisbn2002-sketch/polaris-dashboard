@@ -3,45 +3,45 @@
   "items": [
     {
       "id": 1,
-      "title": "Promocionar el nuevo Podcast de OpenAI",
-      "summary": "Desarrolla una campaña de marketing centrada en la reciente adquisición de TBPN por parte de OpenAI. Considera cómo puedes aprovechar este podcast para atraer a una nueva audiencia interesada en la inteligencia artificial y el emprendimiento.",
+      "title": "Aumenta la Retención de Clientes con OpenClaw",
+      "summary": "Crea una campaña de marketing destacando cómo los usuarios de Claude Code pueden integrar OpenClaw para mejorar sus proyectos. Enfoca en testimonios y casos de éxito.",
       "platform": "Web, iOS, Android",
       "category": "Marketing",
       "tags": [
-        "OpenAI",
-        "Marketing",
-        "Podcast"
+        "Marketing digital",
+        "IA",
+        "OpenClaw"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-03T22:00:17.717Z"
+      "updated_at": "2026-04-06T22:00:17.367Z"
     },
     {
       "id": 2,
-      "title": "Reseña de los nuevos modelos de IA de Microsoft",
-      "summary": "Crea una reseña exhaustiva sobre los tres nuevos modelos de IA lanzados por Microsoft. Analiza sus características, ventajas y cómo se comparan con otros competidores en el mercado.",
+      "title": "Reseña del Nuevo Rol de Brad Lightcap en OpenAI",
+      "summary": "Escribe una reseña exhaustiva sobre el reciente cambio en la estructura ejecutiva de OpenAI, destacando el nuevo enfoque de Brad Lightcap en 'proyectos especiales' y su impacto potencial.",
       "platform": "Web, iOS, Android",
       "category": "Reseñas",
       "tags": [
-        "Microsoft",
-        "IA",
-        "Reseña"
+        "Reseña",
+        "OpenAI",
+        "Innovación"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-03T22:00:17.717Z"
+      "updated_at": "2026-04-06T22:00:17.367Z"
     },
     {
       "id": 3,
-      "title": "Guía sobre el uso de avatares en Google Vids",
-      "summary": "Genera contenido educativo que explique cómo los creadores pueden utilizar los nuevos avatares en Google Vids para mejorar su proceso de creación de video a través de prompts personalizados.",
+      "title": "Profundizando en la Revolución de la IA con Claude",
+      "summary": "Desarrolla contenido educativo que explique cómo Claude está cambiando el panorama de asistencia en programación, con énfasis en su precisión y capacidades de contexto.",
       "platform": "Web, iOS, Android",
       "category": "Contenido",
       "tags": [
-        "Google",
-        "Vids",
-        "Contenido"
+        "Educación",
+        "IA",
+        "Claude"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-03T22:00:17.717Z"
+      "updated_at": "2026-04-06T22:00:17.367Z"
     }
   ]
 }
