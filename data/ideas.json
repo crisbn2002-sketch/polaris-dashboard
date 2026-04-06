@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "title": "Anthropic está ganando tracción privada: qué revela sobre el mercado de IA",
-    "summary": "Idea de análisis sobre por qué Anthropic se está volviendo la operación más caliente en el mercado secundario, cómo OpenAI estaría perdiendo terreno en ese frente y por qué una posible IPO de SpaceX podría cambiar el apetito de los inversores privados.",
+    "title": "¿Por qué Anthropic está ganando protagonismo en el mercado privado de IA?",
+    "summary": "Idea de análisis sobre el momento que vive Anthropic en los mercados privados y cómo el interés por sus acciones secundarias contrasta con la pérdida de terreno de OpenAI. Puedes enfocarlo como una lectura de tendencias: qué señales del mercado están impulsando la conversación y por qué la posible salida a bolsa de SpaceX podría mover la atención de los inversores.",
     "platform": "LinkedIn",
     "category": "Análisis",
     "tags": [
       "Anthropic",
-      "mercado privado",
+      "mercados privados",
       "IA"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-04T22:00:43.038Z"
+    "updated_at": "2026-04-06T22:00:55.316Z"
   },
   {
     "id": 2,
-    "title": "Anthropic vs OpenAI: dos movimientos distintos que muestran estrategias de expansión",
-    "summary": "Comparativa entre el momento de Anthropic en mercados privados y la reestructuración ejecutiva de OpenAI. Una pieza para contrastar crecimiento financiero y reorganización interna, y explicar cómo cada empresa está reforzando su posición desde ángulos muy distintos.",
+    "title": "Anthropic vs OpenAI: dos movimientos distintos en la misma semana",
+    "summary": "Idea comparativa entre la subida de protagonismo de Anthropic en el mercado privado y la reestructuración interna de OpenAI con nuevos roles ejecutivos. El ángulo puede mostrar cómo una empresa gana foco por su valor de mercado mientras la otra llama la atención por cambios organizativos y prioridades internas.",
     "platform": "X",
     "category": "Comparativa",
     "tags": [
-      "OpenAI",
       "Anthropic",
-      "estrategia"
+      "OpenAI",
+      "comparación"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-04T22:00:43.038Z"
+    "updated_at": "2026-04-06T22:00:55.316Z"
   },
   {
     "id": 3,
-    "title": "Cómo transformar una noticia de IA en un post de alto engagement",
-    "summary": "Tutorial práctico para creadores: toma una noticia como la compra de Coefficient Bio por parte de Anthropic, extrae el dato central, añade contexto mínimo y ciérralo con una pregunta para generar conversación sin saturar de tecnicismos.",
+    "title": "Cómo explicar el nuevo costo extra de Claude Code con herramientas de terceros",
+    "summary": "Idea tutorial para creadores que quieran contar de forma simple qué cambia para los suscriptores de Claude Code con OpenClaw y otras herramientas externas. Puedes estructurarlo en 3 pasos: qué anunció Anthropic, a quién afecta y cómo comunicar el impacto sin tecnicismos.",
     "platform": "Instagram",
     "category": "Tutorial",
     "tags": [
-      "creación de contenido",
-      "noticias de IA",
-      "engagement"
+      "Claude Code",
+      "OpenClaw",
+      "tutorial"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-04T22:00:43.038Z"
+    "updated_at": "2026-04-06T22:00:55.316Z"
   }
 ]
