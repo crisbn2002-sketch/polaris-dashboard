@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "title": "¿Por qué Anthropic está ganando protagonismo en el mercado privado de IA?",
-    "summary": "Idea de análisis sobre el momento que vive Anthropic en los mercados privados y cómo el interés por sus acciones secundarias contrasta con la pérdida de terreno de OpenAI. Puedes enfocarlo como una lectura de tendencias: qué señales del mercado están impulsando la conversación y por qué la posible salida a bolsa de SpaceX podría mover la atención de los inversores.",
+    "title": "Qué revela el nuevo fondo Zero Shot sobre la próxima ola de inversión en IA",
+    "summary": "Analiza cómo el lanzamiento de un fondo con vínculos profundos a OpenAI y una meta de 100 millones de dólares puede señalar una nueva etapa de inversión temprana en startups de IA. Ideal para explicar qué buscan los fondos especializados y por qué el capital de exalumnos importa.",
     "platform": "LinkedIn",
     "category": "Análisis",
     "tags": [
-      "Anthropic",
-      "mercados privados",
-      "IA"
+      "OpenAI",
+      "venture capital",
+      "startups de IA"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-06T22:00:55.316Z"
+    "updated_at": "2026-04-07T22:00:56.506Z"
   },
   {
     "id": 2,
-    "title": "Anthropic vs OpenAI: dos movimientos distintos en la misma semana",
-    "summary": "Idea comparativa entre la subida de protagonismo de Anthropic en el mercado privado y la reestructuración interna de OpenAI con nuevos roles ejecutivos. El ángulo puede mostrar cómo una empresa gana foco por su valor de mercado mientras la otra llama la atención por cambios organizativos y prioridades internas.",
+    "title": "Google offline dictation vs. apps de dictado AI: qué cambia con Gemma",
+    "summary": "Compara la nueva app de dictado offline de Google con herramientas como Wispr Flow desde el ángulo de uso, privacidad y dependencia de conexión. Perfecta para mostrar por qué un dictado que funciona sin internet puede diferenciarse en el mercado.",
     "platform": "X",
     "category": "Comparativa",
     "tags": [
-      "Anthropic",
-      "OpenAI",
-      "comparación"
+      "Google",
+      "dictado AI",
+      "offline"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-06T22:00:55.316Z"
+    "updated_at": "2026-04-07T22:00:56.506Z"
   },
   {
     "id": 3,
-    "title": "Cómo explicar el nuevo costo extra de Claude Code con herramientas de terceros",
-    "summary": "Idea tutorial para creadores que quieran contar de forma simple qué cambia para los suscriptores de Claude Code con OpenClaw y otras herramientas externas. Puedes estructurarlo en 3 pasos: qué anunció Anthropic, a quién afecta y cómo comunicar el impacto sin tecnicismos.",
-    "platform": "Instagram",
+    "title": "Cómo convertir la nueva app de dictado offline de Google en un video demo",
+    "summary": "Crea un tutorial corto mostrando una situación práctica de uso de la app de dictado de Google sin conexión y explica sus ventajas para capturar notas rápidas en cualquier lugar. Enfócate en una demostración simple y visual con mensajes claros sobre productividad.",
+    "platform": "TikTok",
     "category": "Tutorial",
     "tags": [
-      "Claude Code",
-      "OpenClaw",
-      "tutorial"
+      "Google",
+      "productividad",
+      "tutorial IA"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-06T22:00:55.316Z"
+    "updated_at": "2026-04-07T22:00:56.506Z"
   }
 ]
