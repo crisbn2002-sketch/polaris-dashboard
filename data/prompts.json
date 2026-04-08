@@ -3,45 +3,45 @@
   "items": [
     {
       "id": 1,
-      "title": "Aumenta la Retención de Clientes con OpenClaw",
-      "summary": "Crea una campaña de marketing destacando cómo los usuarios de Claude Code pueden integrar OpenClaw para mejorar sus proyectos. Enfoca en testimonios y casos de éxito.",
-      "platform": "Web, iOS, Android",
+      "title": "Promocionando Modelos AI Inclusivos",
+      "summary": "Crea una campaña de marketing enfocada en resaltar las ventajas de los modelos LLM de código abierto, como el de Arcee, destacando su accesibilidad, rendimiento y cómo están revolucionando la industria. Dirígete a empresas que buscan soluciones personalizables y rentables.",
+      "platform": "Web, Redes Sociales",
       "category": "Marketing",
       "tags": [
-        "Marketing digital",
-        "IA",
-        "OpenClaw"
+        "Marketing AI",
+        "Arcee",
+        "Código Abierto"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-06T22:00:17.367Z"
+      "updated_at": "2026-04-08T22:00:17.125Z"
     },
     {
       "id": 2,
-      "title": "Reseña del Nuevo Rol de Brad Lightcap en OpenAI",
-      "summary": "Escribe una reseña exhaustiva sobre el reciente cambio en la estructura ejecutiva de OpenAI, destacando el nuevo enfoque de Brad Lightcap en 'proyectos especiales' y su impacto potencial.",
-      "platform": "Web, iOS, Android",
+      "title": "Reseñando Firmus: Impulso en Infraestructura AI",
+      "summary": "Elabora una reseña detallada sobre Firmus, analizando su reciente valorización de $5.5B y los desafíos potenciales en la construcción de centros de datos AI. Compara su enfoque con otras empresas en el sector y discute las implicaciones para el futuro.",
+      "platform": "Blog, Video",
       "category": "Reseñas",
       "tags": [
-        "Reseña",
-        "OpenAI",
-        "Innovación"
+        "Reseñas AI",
+        "Firmus",
+        "Infraestructura"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-06T22:00:17.367Z"
+      "updated_at": "2026-04-08T22:00:17.125Z"
     },
     {
       "id": 3,
-      "title": "Profundizando en la Revolución de la IA con Claude",
-      "summary": "Desarrolla contenido educativo que explique cómo Claude está cambiando el panorama de asistencia en programación, con énfasis en su precisión y capacidades de contexto.",
-      "platform": "Web, iOS, Android",
+      "title": "Construyendo el Futuro: Chips y AI",
+      "summary": "Crea contenido que explore la colaboración entre Intel y el proyecto Terafab de Elon Musk, analizando cómo esta sinergia podría transformar la fabricación de semiconductores en EE. UU. y su impacto en la industria de AI y tecnología.",
+      "platform": "Podcast, Artículo",
       "category": "Contenido",
       "tags": [
-        "Educación",
-        "IA",
-        "Claude"
+        "Contenido AI",
+        "Intel",
+        "Terafab"
       ],
       "cta_label": "Usar prompt",
-      "updated_at": "2026-04-06T22:00:17.367Z"
+      "updated_at": "2026-04-08T22:00:17.125Z"
     }
   ]
 }
