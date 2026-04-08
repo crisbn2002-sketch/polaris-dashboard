@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "title": "Qué revela el nuevo fondo Zero Shot sobre la próxima ola de inversión en IA",
-    "summary": "Analiza cómo el lanzamiento de un fondo con vínculos profundos a OpenAI y una meta de 100 millones de dólares puede señalar una nueva etapa de inversión temprana en startups de IA. Ideal para explicar qué buscan los fondos especializados y por qué el capital de exalumnos importa.",
+    "title": "¿Por qué una startup pequeña como Arcee está llamando tanto la atención en IA?",
+    "summary": "Analiza cómo una empresa de 26 personas puede ganar relevancia al construir un LLM abierto y de alto rendimiento, y qué dice esto sobre el valor de la comunidad open source en la competencia con los grandes laboratorios.",
     "platform": "LinkedIn",
     "category": "Análisis",
     "tags": [
-      "OpenAI",
-      "venture capital",
-      "startups de IA"
+      "open source",
+      "LLM",
+      "startup IA"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-07T22:00:56.506Z"
+    "updated_at": "2026-04-08T22:00:55.501Z"
   },
   {
     "id": 2,
-    "title": "Google offline dictation vs. apps de dictado AI: qué cambia con Gemma",
-    "summary": "Compara la nueva app de dictado offline de Google con herramientas como Wispr Flow desde el ángulo de uso, privacidad y dependencia de conexión. Perfecta para mostrar por qué un dictado que funciona sin internet puede diferenciarse en el mercado.",
+    "title": "Firmus vs. Intel/Terafab: dos caminos para ganar la carrera de infraestructura de IA",
+    "summary": "Compara el enfoque de un gran proveedor de data centers respaldado por Nvidia con el movimiento de Intel en el proyecto Terafab de Elon Musk, destacando la diferencia entre escalar centros de datos y apostar por nueva fabricación de chips.",
     "platform": "X",
     "category": "Comparativa",
     "tags": [
-      "Google",
-      "dictado AI",
-      "offline"
+      "data centers",
+      "chips",
+      "infraestructura IA"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-07T22:00:56.506Z"
+    "updated_at": "2026-04-08T22:00:55.501Z"
   },
   {
     "id": 3,
-    "title": "Cómo convertir la nueva app de dictado offline de Google en un video demo",
-    "summary": "Crea un tutorial corto mostrando una situación práctica de uso de la app de dictado de Google sin conexión y explica sus ventajas para capturar notas rápidas en cualquier lugar. Enfócate en una demostración simple y visual con mensajes claros sobre productividad.",
-    "platform": "TikTok",
+    "title": "Cómo usar esta noticia de Arcee para explicar el auge del open source en IA",
+    "summary": "Crea un hilo o reel con 3 pasos: presentar quién es Arcee, explicar por qué un modelo abierto y potente importa, y cerrar con una pregunta sobre si el futuro de la IA será más abierto o más cerrado.",
+    "platform": "Instagram",
     "category": "Tutorial",
     "tags": [
-      "Google",
-      "productividad",
-      "tutorial IA"
+      "contenido IA",
+      "open source",
+      "storytelling"
     ],
     "cta_label": "Usar idea",
     "source_reference": "top-news.json",
-    "updated_at": "2026-04-07T22:00:56.506Z"
+    "updated_at": "2026-04-08T22:00:55.501Z"
   }
 ]
